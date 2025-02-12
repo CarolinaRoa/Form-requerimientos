@@ -1,0 +1,2204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Requerimientos de diseño</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cabecera"></div>
+    <div class="container">
+        <div class="tab-container">
+            <div class="tab-header">
+                <button class="tab-link" onclick="openTab(event, 'tab1')">Prueba</button>
+                <button class="tab-link" onclick="openTab(event, 'tab2')">Licitaciones</button>
+                <button class="tab-link" onclick="openTab(event, 'tab3')">Nuevos Proyectos</button>
+                <button class="tab-link" onclick="openTab(event, 'tab4')">Cotizaciones</button>
+            </div>
+
+            <section class="bienvenida">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Bienvenido al módulo de requerimientos del área de diseño</h3>
+                        <p>Por favor llena todos los campos y déjanos la fecha tentativa de tu requerimiento, con todo gusto lo atenderemos y te confirmaremos la fecha de ejecución. <br> <br>
+                            <a href="https://merpes2-my.sharepoint.com/:x:/r/personal/jefediseno_grupomerpes_com/Documents/Trafico%20dise%C3%B1o%20final.xlsx?d=wc88b8a3d0ed34b37bbc5dd4844694749&csf=1&web=1&e=qs0q8Y" target="_blank" class="btn btn-secondary">Revisa el tráfico aquí</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="tab-content" id="tab1">
+                <link rel="stylesheet" href="css/requerimientos.css">
+                <!--<h2>Requerimientos</h2>-->
+                <section>
+                    <form method="post" action="requerimientos2.php" enctype="multipart/form-data" id="requerimientos">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cliente-campaña">Cliente y/o campaña</label>
+                                <select name="cliente-campaña" id="cliente-campaña" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona cliente y/o campaña</option>
+                                    <!--<option value="Licitaciones">Licitaciones</option>-->
+                                    <option value="Almacenamiento">Almacenamiento</option>
+                                    <option value="Apex CO - Fuerza Apex">Apex CO- Fuerza Apex</option>
+                                    <option value="Apex ME- Ganadores Apex">Apex ME- Ganadores Apex</option>
+                                    <option value="B&D - Industrias Imparables">B&D - Industrias Imparables</option>
+                                    <option value="B&D - Yellow Force">B&D - Yellow Force</option>
+                                    <option value="Bavaria - Invencibles">Bavaria - Invencibles</option>
+                                    <option value="Bavaria - Visionarios">Bavaria - Visionarios</option>
+                                    <option value="Bayport - Bayport plus">Bayport - Bayport plus</option>
+                                    <option value="Beiersdorf - Socios Sin Limites">Beiersdorf - Socios Sin Limites</option>
+                                    <option value="Brilla - Brilla tu corazón">Brilla - Brilla tu corazón</option>
+                                    <option value="Caja Social">Caja Social</option>
+                                    <option value="Campañas Gloria">Campañas Gloria</option>
+                                    <option value="Campañas Henkel">Campañas Henkel</option>
+                                    <option value="Campañas Nestle - Culinaria">Campañas Nestle - Culinaria</option>
+                                    <option value="Campañas Nestle - El Rodeo">Campañas Nestle - El Rodeo</option>
+                                    <option value="Campañas Nestle - Klim">Campañas Nestle - Klim</option>
+                                    <option value="Campañas Nestle - Milo Coins">Campañas Nestle - Milo Coins</option>
+                                    <option value="Campañas Nestle - Natures Heart">Campañas Nestle - Natures Heart</option>
+                                    <option value="Campañas Nestle - Playa limpia Cososette">Campañas Nestle - Playa limpia Cososette</option>
+                                    <option value="Casa Luker">Casa Luker</option>
+                                    <option value="CBC Perú - Equipazo 2024">CBC Perú - Equipazo 2024</option>
+                                    <option value="Coca Cola Col - Detallistas">Coca Cola Col - Detallistas</option>
+                                    <option value="Coca Cola Col - Fuerza de ventas">Coca Cola Col - Fuerza de ventas</option>
+                                    <option value="Coca Cola Col - Repisadores">Coca Cola Col - Repisadores</option>
+                                    <option value="Coca Cola CR - Gana +">Coca Cola CR - Gana +</option>
+                                    <option value="Coca Cola GU - Premia Puntos">Coca Cola GU - Premia Puntos</option>
+                                    <option value="Coca Cola GU - Premia Puntos">Coca Cola GU - Premia Puntos</option>
+                                    <option value="Coca Cola PA - Plan Fren">Coca Cola PA - Plan Fren</option>
+                                    <option value="Compras">Compras</option>
+                                    <option value="Comunicaciones">Comunicaciones</option>
+                                    <option value="Diageo by Sin Límites">Diageo by Sin Límites</option>
+                                    <option value="Diageo CA - Visionarios Recargados">Diageo CA - Visionarios Recargados</option>
+                                    <option value="Diageo CA - Team Dream">Diageo CA - Team Dream</option>
+                                    <option value="Diageo Col - Caminantes">Diageo Col - Caminantes</option>
+                                    <option value="Diageo Col - Legado de ganadores">Diageo Col - Legado de ganadores</option>
+                                    <option value="Diversey Col - Juntos + Fuertes">Diversey Col - Juntos + Fuertes</option>
+                                    <option value="Diversey Ecu - Juntos + Fuertes">Diversey Ecu - Juntos + Fuertes</option>
+                                    <option value="Dos Pinos CR - La gran carrera">Dos Pinos CR - La gran carrera</option>
+                                    <option value="Dos Pinos CR - Gran acumulado">Dos Pinos CR - Gran Acumulado</option>
+                                    <option value="E-commerce">E-commerce</option>
+                                    <option value="Eficacia - Incentiva-t">Eficacia - Incentiva-t</option>
+                                    <option value="FEC">FEC</option>
+                                    <option value="FNB">FNB</option>
+                                    <option value="Gloria - El sabor de la gloria">Gloria - El sabor de la gloria</option>
+                                    <option value="Grupo Merpes Colombia">Grupo Merpes Colombia</option>
+                                    <option value="Grupo Merpes Costa Rica">Grupo Merpes Costa Rica</option>
+                                    <option value="Grupo Merpes Ecuador">Grupo Merpes Ecuador</option>
+                                    <option value="Grupo Merpes Guatemala">Grupo Merpes Guatemala</option>
+                                    <option value="Grupo Merpes Panamá">Grupo Merpes Panamá</option>
+                                    <option value="Grupo Merpes Perú">Grupo Merpes Perú</option>
+                                    <option value="Grupo Merpes - Invencibles">Grupo Merpes - Invencibles</option>
+                                    <option value="Impocali - Redes de fidelización">Impocali - Redes de fidelización</option>
+                                    <option value="Institucional">Institucional</option>
+                                    <option value="Kimberly Clark Col - Conekctate">Kimberly Clark Col - Conekctate</option>
+                                    <option value="Kimberly Clark Col - Invencibles">Kimberly Clark Col - Invencibles</option>
+                                    <option value="Kimberly Clark Col - Titanes">Kimberly Clark Col - Titanes</option>
+                                    <option value="Kimberly Clark Perú - Escuadrón">Kimberly Clark Perú - Escuadrón</option>
+                                    <option value="Lactalis - Triathlon">Lactalis - Triathlon</option>
+                                    <option value="Levapan - Levaplus">Levapan - Levaplus</option>
+                                    <option value="Logística">Logística</option>
+                                    <option value="Los Propios">Los Propios</option>
+                                    <option value="Mertec">Mertec</option>
+                                    <option value="Nestle - Confiteros de corazón">Nestle - Confiteros de corazón</option>
+                                    <option value="Newell - La venta de oro">Newell - La venta de oro</option>
+                                    <option value="Pallevarlo">Pallevarlo</option>
+                                    <option value="Papeles Nacionales - Jugada Maestra">Papeles Nacionales - Jugada Maestra</option>
+                                    <option value="Plataformas transversal">Plataformas transversal</option>
+                                    <option value="PMI - El propio comercial">PMI - El propio comercial</option>
+                                    <option value="Red Llantas - Red Puntos">Red Llantas - Red Puntos</option>
+                                    <option value="Sanofi Opelia - Valientes de Corazón">Sanofi Opelia - Valientes de Corazón</option>
+                                    <option value="SC Johnson - Plan Conquista">SC Johnson - Plan Conquista</option>
+                                    <option value="SC Johnson - Plan Conquista">SC Johnson - Triunfadores</option>
+                                    <option value="Softys - Estrellas Softys">Softys - Estrellas Softys</option>
+                                    <option value="Softys - Héroes Softys">Softys - Héroes Softys</option>
+                                    <option value="Team Foods - Guardianes / Paniclub">Team Foods - Guardianes / Paniclub</option>
+                                    <option value="Terpel - Tienda Terpel">Terpel - Tienda Terpel</option>
+                                    <option value="Valvoline - Club de pilotos">Valvoline - Club de pilotos</option>
+                                    <option value="Vanti - Full Servicio">Vanti - Full Servicio</option>
+                                    <option value="Web Confiteria Nestle">Web Confiteria Nestle</option>
+                                    <option value="Wavin - Solo Pavco Wavin recargado">Wavin - Solo Pavco Wavin recargado</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-3">
+                                <label for="">Fecha de la solicitud</label>
+                                <input type="date" class="form-control" id="fecha-solicitud" name="fecha-solicitud" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="">Número de piezas</label>
+                                <select name="cantidad-piezas" id="cantidad-piezas" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona un número</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12" style="display: none;">
+                                <label for="otro-cliente-campaña">¿Cuál?</label>
+                                <input type="text" class="form-control" id="otro-cliente-campaña" name="otro-cliente-campaña">
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="tipo-pieza">Categoría</label>
+                                <select name="tipo-pieza" id="tipo-pieza" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona la categoría</option>
+                                    <option value="Banners">Banners</option>
+                                    <option value="WhatsApp">WhatsApp</option>
+                                    <option value="Presentaciones editables">Presentaciones editables</option>
+                                    <option value="Mockups">Mockups</option>
+                                    <option value="Piezas animadas y audio">Piezas animadas y audio</option>
+                                    <option value="Impresos">Impresos</option>
+                                    <option value="Nuevos proyectos">Nuevos proyectos</option>
+                                    <option value="Redes sociales">Redes sociales</option>
+                                    <option value="Administración plataforma">Administración plataforma</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c1">Banners</label>
+                                <select name="tipo-pieza-c1" id="tipo-pieza-c1" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de banner</option>
+                                    <option value="Banners plataforma">Banners plataforma</option>
+                                    <option value="Banners WhatsApp">Banners WhatsApp</option>
+                                    <option value="Banners mailling">Banners mailling</option>
+                                    <option value="Banners calendario comercial">Banners calendario comercial</option>
+                                    <option value="Banners comunicación interna">Banners comunicación interna</option>
+                                    <option value="Banners infografías">Banners infografías</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c2">WhatsApp</label>
+                                <select name="tipo-pieza-c2" id="tipo-pieza-c2" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Paso a paso general">Paso a paso general</option>
+                                    <option value="Stickers WhatsApp">Stickers WhatsApp</option>
+                                    <option value="Personaje WhatsApp">Personaje WhatsApp</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c3">Presentaciones editables</label>
+                                <select name="tipo-pieza-c3" id="tipo-pieza-c3" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de ppt</option>
+                                    <option value="PPT templates retos">PPT templates retos</option>
+                                    <option value="PPT catálogo editable">PPT catálogo editable</option>
+                                    <option value="PPT presentación editable">PPT presentación editable</option>
+                                    <option value="PPT Plantillas bonos Kupaa">PPT Plantillas bonos Kupaa</option>
+                                    <option value="PPT comercial">PPT comercial</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c4">Mockups</label>
+                                <select name="tipo-pieza-c4" id="tipo-pieza-c4" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de mockup</option>
+                                    <option value="Actualización contenido App">Mockups bonos Kupaa</option>
+                                    <option value="Mockups productos catálogo">Mockups productos catálogo</option>
+                                    <option value="Mockups actividades campañas">Mockups actividades campañas</option>
+                                    <option value="Mockups dotaciones FNB">Mockups dotaciones FNB</option>
+                                    <option value="Mockups merchandising">Mockups merchandising</option>
+                                    <option value="Mockups POP">Mockups POP</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c5">Piezas animadas y audio</label>
+                                <select name="tipo-pieza-c5" id="tipo-pieza-c5" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Capsula animada">Capsula animada</option>
+                                    <option value="Capsula paso a paso">Capsula paso a paso</option>
+                                    <option value="Capsula general plataforma">Capsula general plataforma</option>
+                                    <option value="Gif animado">Gif animado</option>
+                                    <option value="Cuñas perifoneo">Cuñas perifoneo</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c6">Impresos</label>
+                                <select name="tipo-pieza-c6" id="tipo-pieza-c6" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de impreso</option>
+                                    <option value="Diseño material impreso / POP">Diseño material impreso / POP</option>
+                                    <option value="Diseño caja (plano mecánico)">Diseño caja (plano mecánico)</option>
+                                    <option value="Impresión carnets">Impresión carnets</option>
+                                    <option value="Manual producto">Manual producto</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c7">Nuevos proyectos</label>
+                                <select name="tipo-pieza-c7" id="tipo-pieza-c7" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                    <option value="Mockups App">Mockups App</option>
+                                    <option value="Propuesta logotipo">Propuesta logotipo</option>
+                                    <option value="Propuesta Kv">Propuesta Kv</option>
+                                    <option value="PPT propuesta licitación">PPT propuesta licitación</option>
+                                    <option value="Piezas digitales bingo">Piezas digitales bingo</option>
+                                    <option value="Diseño landing page">Diseño landing page</option>
+                                    <option value="Desarrollo de prototipos">Desarrollo de prototipos</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c8">Redes sociales</label>
+                                <select name="tipo-pieza-c8" id="tipo-pieza-c8" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Publicaciones redes sociales">Publicaciones redes sociales</option>
+                                    <option value="Video TikTok">Video TikTok</option>
+                                    <option value="Historia">Historia</option>
+                                    <option value="Reel">Reel</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c9">Administración plataforma</label>
+                                <select name="tipo-pieza-c9" id="tipo-pieza-c9" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Crear nueva campaña">Crear nueva campaña</option>
+                                    <option value="Publicar banners">Publicar banners</option>
+                                    <option value="Publicar T&C">Publicar T&C</option>
+                                    <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                    <option value="Mockups App">Mockups App</option>
+                                    <option value="Vestir plataforma">Vestir plataforma</option>
+                                    <option value="Vestir App">Vestir App</option>
+                                    <option value="Actualización contenido App">Actualización contenido App</option>
+                                    <option value="Seguimientos plataforma">Seguimientos plataforma</option>
+                                    <option value="Plantillas mail plataforma">Plantillas mail plataforma</option>
+                                    <option value="Punto plataforma">Punto plataforma</option>
+                                    <option value="Imágenes galeria carrusel">Imágenes galeria carrusel</option>
+                                    <option value="Responsive plataforma">Responsive plataforma</option>
+                                    <option value="Crear módulo">Crear módulo</option>
+                                    <option value="Ajustes plataforma">Ajustes plataforma</option>
+                                    <option value="Cronometro vencimiento puntos">Cronometro vencimiento puntos</option>
+                                    <option value="Configurar módulo conocimiento">Configurar módulo conocimiento</option>
+                                    <option value="Cargar curso módulo conocimiento">Cargar curso módulo conocimiento</option>
+                                    <option value="Ajustes módulo de conocimiento">Ajustes módulo de conocimiento</option>
+                                    <option value="Publicar calendario comercial">Publicar calendario comercial</option>
+                                    <option value="Crear módulos para perfiles">Crear módulos para perfiles</option>
+                                    <option value="Ajustes perfiles">Ajustes perfiles</option>
+                                    <option value="Códigos Google Analytics">Códigos Google Analytics</option>
+                                    <option value="Configuración visual de bolsas">Configuración visual de bolsas</option>
+                                    <option value="Html mails / firmas">Html mails / firmas</option>
+                                    <option value="Enrrutar plataforma">Enrrutar plataforma</option>
+                                    <option value="Recursos dashboard">Recursos dashboard</option>
+                                    <option value="Formulario de captura">Formulario de captura</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="">¿Cual?</label>
+                                <input type="text" class="form-control" id="otra-categoria" name="otra-categoria">
+                            </div>        
+                        </div>
+                        
+                        <div class="row mt-3" id="otra-pieza-div">
+                            <div class="col-md-6">
+                                <label for="">¿Cual?</label>
+                                <input type="text" class="form-control" id="otra-pieza" name="otra-pieza">
+                            </div>
+                        </div>
+                          
+
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="">Objetivo de la pieza</label>
+                                <textarea name="objetivo-pieza" id="objetivo-pieza" rows="3" class="form-control" placeholder="Describe detalladamente el objetivo de la pieza. Escribe mínimo 20 caracteres." required minlength="20"></textarea>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                                <label for="pieza-incluida">¿La pieza está incluida en la campaña?</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="pieza-incluida" id="pieza-incluida-si" value="Si" required>
+                                    <label class="form-check-label" for="pieza-incluida-si">Sí</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="pieza-incluida" id="pieza-incluida-no" value="No">
+                                    <label class="form-check-label" for="pieza-incluida-no">No</label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div id="archivo-div" style="display:none;">
+                                    <label for="archivo" style="font-size: medium;">Aquí debes cargar la imagen de aprobación de cotización por parte del cliente.<br></label>
+                                    <input type="file" id="archivo" name="archivo[]" class="form-control-file" multiple
+                                    accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                    <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                </div>
+                            </div>
+                        </div>                        
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="">Copy</label>
+                                <textarea name="copy" id="copy" rows="2" class="form-control"
+                                    placeholder="Por favor déjanos el texto sugerido para la pieza. Ten en cuenta datos obligatorios como: Fechas, sitios, nombres, productos, información específica. Escribe mínimo 20 caracteres." required minlength="20"></textarea>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="">¿Se puede modificar el copy?</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="modficar-copy" id="modficar-copy-si" value="Si" required>
+                                    <label class="form-check-label" for="modificar-si">Sí</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="modficar-copy" id="modficar-copy-no" value="No">
+                                    <label class="form-check-label" for="modficar-copy-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="">Detalles que debemos tener en cuenta</label>
+                                <textarea name="detalles" id="detalles" rows="5" class="form-control"
+                                    placeholder="Si hay detalles específicos, por favor déjalos aquí ( Colores, imágenes, formato, recursos etc). Escribe mínimo 20 caracteres." required minlength="20"></textarea>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <label for="">Aquí puedes cargar imagenes o archivos de apoyo para el requerimiento.</label> <br>
+                            <div class="col-md-4 subir-recursos">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cargar-recursos" id="cargar-aqui" value="Cargar en form">
+                                    <label class="form-check-label" for="cargar-aqui">Cargar aquí</label>
+                                </div>        
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cargar-recursos" id="cargar-wetransfer" value="Cargar en WeTransfer">
+                                    <label class="form-check-label" for="cargar-wetransfer">Cargar por WeTransfer</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-7">
+                                <div id="recursos-aqui" style="display:none;">
+                                    <input type="file" id="archivo-apoyo" name="archivo-apoyo[]" class="form-control-file" multiple
+                                    accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                    <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                </div>
+
+                                <div id="recursos-wetransfer" style="display:none;">
+                                    <label for="" style="font-size: medium;">Haz clic sobre el link y envía el archivo <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <section class="form2 mt-3" style="display: none;">
+                            <div>
+                            
+                                <h3>Pieza 2</h3>
+                                <script src="js/requerimientosForm2.js"></script>
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label for="tipo-pieza-2">Categoría</label>
+                                        <select name="tipo-pieza-2" id="tipo-pieza-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona la categoría</option>
+                                            <option value="Banners">Banners</option>
+                                            <option value="WhatsApp">WhatsApp</option>
+                                            <option value="Presentaciones editables">Presentaciones editables</option>
+                                            <option value="Mockups">Mockups</option>
+                                            <option value="Piezas animadas y audio">Piezas animadas y audio</option>
+                                            <option value="Impresos">Impresos</option>
+                                            <option value="Nuevos proyectos">Nuevos proyectos</option>
+                                            <option value="Redes sociales">Redes sociales</option>
+                                            <option value="Administración plataforma">Administración plataforma</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c1-2">Banners</label>
+                                        <select name="tipo-pieza-c1-2" id="tipo-pieza-c1-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de banner</option>
+                                            <option value="Banners plataforma">Banners plataforma</option>
+                                            <option value="Banners WhatsApp">Banners WhatsApp</option>
+                                            <option value="Banners mailling">Banners mailling</option>
+                                            <option value="Banners calendario comercial">Banners calendario comercial</option>
+                                            <option value="Banners comunicación interna">Banners comunicación interna</option>
+                                            <option value="Banners infografías">Banners infografías</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c2-2">WhatsApp</label>
+                                        <select name="tipo-pieza-c2-2" id="tipo-pieza-c2-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Paso a paso general">Paso a paso general</option>
+                                            <option value="Stickers WhatsApp">Stickers WhatsApp</option>
+                                            <option value="Personaje WhatsApp">Personaje WhatsApp</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c3-2">Presentaciones editables</label>
+                                        <select name="tipo-pieza-c3-2" id="tipo-pieza-c3-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de ppt</option>
+                                            <option value="PPT templates retos">PPT templates retos</option>
+                                            <option value="PPT catálogo editable">PPT catálogo editable</option>
+                                            <option value="PPT presentación editable">PPT presentación editable</option>
+                                            <option value="PPT Plantillas bonos Kupaa">PPT Plantillas bonos Kupaa</option>
+                                            <option value="PPT comercial">PPT comercial</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c4-2">Mockups</label>
+                                        <select name="tipo-pieza-c4-2" id="tipo-pieza-c4-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de mockup</option>
+                                            <option value="Actualización contenido App">Mockups bonos Kupaa</option>
+                                            <option value="Mockups productos catálogo">Mockups productos catálogo</option>
+                                            <option value="Mockups actividades campañas">Mockups actividades campañas</option>
+                                            <option value="Mockups dotaciones FNB">Mockups dotaciones FNB</option>
+                                            <option value="Mockups merchandising">Mockups merchandising</option>
+                                            <option value="Mockups POP">Mockups POP</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c5-2">Piezas animadas y audio</label>
+                                        <select name="tipo-pieza-c5-2" id="tipo-pieza-c5-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Capsula animada">Capsula animada</option>
+                                            <option value="Capsula paso a paso">Capsula paso a paso</option>
+                                            <option value="Capsula general plataforma">Capsula general plataforma</option>
+                                            <option value="Gif animado">Gif animado</option>
+                                            <option value="Cuñas perifoneo">Cuñas perifoneo</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c6-2">Impresos</label>
+                                        <select name="tipo-pieza-c6-2" id="tipo-pieza-c6-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de impreso</option>
+                                            <option value="Diseño material impreso / POP">Diseño material impreso / POP</option>
+                                            <option value="Diseño caja (plano mecánico)">Diseño caja (plano mecánico)</option>
+                                            <option value="Impresión carnets">Impresión carnets</option>
+                                            <option value="Manual producto">Manual producto</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c7-2">Nuevos proyectos</label>
+                                        <select name="tipo-pieza-c7-2" id="tipo-pieza-c7-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                            <option value="Mockups App">Mockups App</option>
+                                            <option value="Propuesta logotipo">Propuesta logotipo</option>
+                                            <option value="Propuesta Kv">Propuesta Kv</option>
+                                            <option value="PPT propuesta licitación">PPT propuesta licitación</option>
+                                            <option value="Piezas digitales bingo">Piezas digitales bingo</option>
+                                            <option value="Diseño landing page">Diseño landing page</option>
+                                            <option value="Desarrollo de prototipos">Desarrollo de prototipos</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c8-2">Redes sociales</label>
+                                        <select name="tipo-pieza-c8-2" id="tipo-pieza-c8-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Publicaciones redes sociales">Publicaciones redes sociales</option>
+                                            <option value="Video TikTok">Video TikTok</option>
+                                            <option value="Historia">Historia</option>
+                                            <option value="Reel">Reel</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c9-2">Administración plataforma</label>
+                                        <select name="tipo-pieza-c9-2" id="tipo-pieza-c9-2" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Crear nueva campaña">Crear nueva campaña</option>
+                                            <option value="Publicar banners">Publicar banners</option>
+                                            <option value="Publicar T&C">Publicar T&C</option>
+                                            <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                            <option value="Mockups App">Mockups App</option>
+                                            <option value="Vestir plataforma">Vestir plataforma</option>
+                                            <option value="Vestir App">Vestir App</option>
+                                            <option value="Actualización contenido App">Actualización contenido App</option>
+                                            <option value="Seguimientos plataforma">Seguimientos plataforma</option>
+                                            <option value="Plantillas mail plataforma">Plantillas mail plataforma</option>
+                                            <option value="Punto plataforma">Punto plataforma</option>
+                                            <option value="Imágenes galeria carrusel">Imágenes galeria carrusel</option>
+                                            <option value="Responsive plataforma">Responsive plataforma</option>
+                                            <option value="Crear módulo">Crear módulo</option>
+                                            <option value="Ajustes plataforma">Ajustes plataforma</option>
+                                            <option value="Cronometro vencimiento puntos">Cronometro vencimiento puntos</option>
+                                            <option value="Configurar módulo conocimiento">Configurar módulo conocimiento</option>
+                                            <option value="Cargar curso módulo conocimiento">Cargar curso módulo conocimiento</option>
+                                            <option value="Ajustes módulo de conocimiento">Ajustes módulo de conocimiento</option>
+                                            <option value="Publicar calendario comercial">Publicar calendario comercial</option>
+                                            <option value="Crear módulos para perfiles">Crear módulos para perfiles</option>
+                                            <option value="Ajustes perfiles">Ajustes perfiles</option>
+                                            <option value="Códigos Google Analytics">Códigos Google Analytics</option>
+                                            <option value="Configuración visual de bolsas">Configuración visual de bolsas</option>
+                                            <option value="Html mails / firmas">Html mails / firmas</option>
+                                            <option value="Enrrutar plataforma">Enrrutar plataforma</option>
+                                            <option value="Recursos dashboard">Recursos dashboard</option>
+                                            <option value="Formulario de captura">Formulario de captura</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="">¿Cual?</label>
+                                        <input type="text" class="form-control" id="otra-categoria-2" name="otra-categoria-2">
+                                    </div>        
+                                </div>
+
+                                <div class="row mt-3" id="otra-pieza-div">
+                                    <div class="col-md-6">
+                                        <label for="">¿Cual?</label>
+                                        <input type="text" class="form-control" id="otra-pieza-2" name="otra-pieza-2">
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Objetivo de la pieza</label>
+                                        <textarea name="objetivo-pieza-2" id="objetivo-pieza-2" rows="3" class="form-control" placeholder="Describe detalladamente el objetivo de la pieza. Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <label for="pieza-incluida-2">¿La pieza está incluida en la campaña?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pieza-incluida-2" id="pieza-incluida-si-2" value="Si" >
+                                            <label class="form-check-label" for="pieza-incluida-si-2">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pieza-incluida-2" id="pieza-incluida-no-2" value="No">
+                                            <label class="form-check-label" for="pieza-incluida-no-2">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div id="archivo-div-2" style="display:none;">
+                                            <label for="archivo-2" style="font-size: medium;">Aquí debes cargar la imagen de aprobación de cotización por parte del cliente.<br></label>
+                                            <input type="file" id="archivo-2" name="archivo-2[]" class="form-control-file" multiple
+                                            accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                        </div>
+                                    </div>
+                                </div>                        
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Copy</label>
+                                        <textarea name="copy-2" id="copy-2" rows="2" class="form-control"
+                                            placeholder="Por favor déjanos el texto sugerido para la pieza. Ten en cuenta datos obligatorios como: Fechas, sitios, nombres, productos, información específica. Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">¿Se puede modificar el copy?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modficar-copy-2" id="modficar-copy-si-2" value="Si">
+                                            <label class="form-check-label" for="modificar-si-2">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modficar-copy-2" id="modficar-copy-no-2" value="No">
+                                            <label class="form-check-label" for="modficar-copy-no-2">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Detalles que debemos tener en cuenta</label>
+                                        <textarea name="detalles-2" id="detalles-2" rows="5" class="form-control"
+                                            placeholder="Si hay detalles específicos, por favor déjalos aquí ( Colores, imágenes, formato, recursos etc). Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                
+                                <div class="row mt-3">
+                                    <label for="">Aquí puedes cargar imagenes o archivos de apoyo para el requerimiento.</label> <br>
+                                    <div class="col-md-4 subir-recursos">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cargar-recursos-2" id="cargar-aqui-2" value="Cargar en form">
+                                            <label class="form-check-label" for="cargar-aqui-2">Cargar aquí</label>
+                                        </div>        
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cargar-recursos-2" id="cargar-wetransfer-2" value="Cargar en WeTransfer">
+                                            <label class="form-check-label" for="cargar-wetransfer-2">Cargar por WeTransfer</label>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-md-7">
+                                        <div id="recursos-aqui-2" style="display:none;">
+                                            <input type="file" id="archivo-apoyo-2" name="archivo-apoyo-2[]" class="form-control-file" multiple
+                                            accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                        </div>
+        
+                                        <div id="recursos-wetransfer-2" style="display:none;">
+                                            <label for="" style="font-size: medium;">Haz clic sobre el link y envía el archivo <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </section>
+                
+                        <section class="form3 mt-3" style="display: none;">
+                            <div>
+                                
+                                <h3>Pieza 3</h3>
+                                <script src="js/requerimientosForm3.js"></script>
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label for="tipo-pieza-3">Categoría</label>
+                                        <select name="tipo-pieza-3" id="tipo-pieza-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona la categoría</option>
+                                            <option value="Banners">Banners</option>
+                                            <option value="WhatsApp">WhatsApp</option>
+                                            <option value="Presentaciones editables">Presentaciones editables</option>
+                                            <option value="Mockups">Mockups</option>
+                                            <option value="Piezas animadas y audio">Piezas animadas y audio</option>
+                                            <option value="Impresos">Impresos</option>
+                                            <option value="Nuevos proyectos">Nuevos proyectos</option>
+                                            <option value="Redes sociales">Redes sociales</option>
+                                            <option value="Administración plataforma">Administración plataforma</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c1-3">Banners</label>
+                                        <select name="tipo-pieza-c1-3" id="tipo-pieza-c1-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de banner</option>
+                                            <option value="Banners plataforma">Banners plataforma</option>
+                                            <option value="Banners WhatsApp">Banners WhatsApp</option>
+                                            <option value="Banners mailling">Banners mailling</option>
+                                            <option value="Banners calendario comercial">Banners calendario comercial</option>
+                                            <option value="Banners comunicación interna">Banners comunicación interna</option>
+                                            <option value="Banners infografías">Banners infografías</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c2-3">WhatsApp</label>
+                                        <select name="tipo-pieza-c2-3" id="tipo-pieza-c2-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Paso a paso general">Paso a paso general</option>
+                                            <option value="Stickers WhatsApp">Stickers WhatsApp</option>
+                                            <option value="Personaje WhatsApp">Personaje WhatsApp</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c3-3">Presentaciones editables</label>
+                                        <select name="tipo-pieza-c3-3" id="tipo-pieza-c3-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de ppt</option>
+                                            <option value="PPT templates retos">PPT templates retos</option>
+                                            <option value="PPT catálogo editable">PPT catálogo editable</option>
+                                            <option value="PPT presentación editable">PPT presentación editable</option>
+                                            <option value="PPT Plantillas bonos Kupaa">PPT Plantillas bonos Kupaa</option>
+                                            <option value="PPT comercial">PPT comercial</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c4-3">Mockups</label>
+                                        <select name="tipo-pieza-c4-3" id="tipo-pieza-c4-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de mockup</option>
+                                            <option value="Actualización contenido App">Mockups bonos Kupaa</option>
+                                            <option value="Mockups productos catálogo">Mockups productos catálogo</option>
+                                            <option value="Mockups actividades campañas">Mockups actividades campañas</option>
+                                            <option value="Mockups dotaciones FNB">Mockups dotaciones FNB</option>
+                                            <option value="Mockups merchandising">Mockups merchandising</option>
+                                            <option value="Mockups POP">Mockups POP</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c5-3">Piezas animadas y audio</label>
+                                        <select name="tipo-pieza-c5-3" id="tipo-pieza-c5-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Capsula animada">Capsula animada</option>
+                                            <option value="Capsula paso a paso">Capsula paso a paso</option>
+                                            <option value="Capsula general plataforma">Capsula general plataforma</option>
+                                            <option value="Gif animado">Gif animado</option>
+                                            <option value="Cuñas perifoneo">Cuñas perifoneo</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c6-3">Impresos</label>
+                                        <select name="tipo-pieza-c6-3" id="tipo-pieza-c6-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de impreso</option>
+                                            <option value="Diseño material impreso / POP">Diseño material impreso / POP</option>
+                                            <option value="Diseño caja (plano mecánico)">Diseño caja (plano mecánico)</option>
+                                            <option value="Impresión carnets">Impresión carnets</option>
+                                            <option value="Manual producto">Manual producto</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c7-3">Nuevos proyectos</label>
+                                        <select name="tipo-pieza-c7-3" id="tipo-pieza-c7-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                            <option value="Mockups App">Mockups App</option>
+                                            <option value="Propuesta logotipo">Propuesta logotipo</option>
+                                            <option value="Propuesta Kv">Propuesta Kv</option>
+                                            <option value="PPT propuesta licitación">PPT propuesta licitación</option>
+                                            <option value="Piezas digitales bingo">Piezas digitales bingo</option>
+                                            <option value="Diseño landing page">Diseño landing page</option>
+                                            <option value="Desarrollo de prototipos">Desarrollo de prototipos</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c8-3">Redes sociales</label>
+                                        <select name="tipo-pieza-c8-3" id="tipo-pieza-c8-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Publicaciones redes sociales">Publicaciones redes sociales</option>
+                                            <option value="Video TikTok">Video TikTok</option>
+                                            <option value="Historia">Historia</option>
+                                            <option value="Reel">Reel</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c9-3">Administración plataforma</label>
+                                        <select name="tipo-pieza-c9-3" id="tipo-pieza-c9-3" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Crear nueva campaña">Crear nueva campaña</option>
+                                            <option value="Publicar banners">Publicar banners</option>
+                                            <option value="Publicar T&C">Publicar T&C</option>
+                                            <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                            <option value="Mockups App">Mockups App</option>
+                                            <option value="Vestir plataforma">Vestir plataforma</option>
+                                            <option value="Vestir App">Vestir App</option>
+                                            <option value="Actualización contenido App">Actualización contenido App</option>
+                                            <option value="Seguimientos plataforma">Seguimientos plataforma</option>
+                                            <option value="Plantillas mail plataforma">Plantillas mail plataforma</option>
+                                            <option value="Punto plataforma">Punto plataforma</option>
+                                            <option value="Imágenes galeria carrusel">Imágenes galeria carrusel</option>
+                                            <option value="Responsive plataforma">Responsive plataforma</option>
+                                            <option value="Crear módulo">Crear módulo</option>
+                                            <option value="Ajustes plataforma">Ajustes plataforma</option>
+                                            <option value="Cronometro vencimiento puntos">Cronometro vencimiento puntos</option>
+                                            <option value="Configurar módulo conocimiento">Configurar módulo conocimiento</option>
+                                            <option value="Cargar curso módulo conocimiento">Cargar curso módulo conocimiento</option>
+                                            <option value="Ajustes módulo de conocimiento">Ajustes módulo de conocimiento</option>
+                                            <option value="Publicar calendario comercial">Publicar calendario comercial</option>
+                                            <option value="Crear módulos para perfiles">Crear módulos para perfiles</option>
+                                            <option value="Ajustes perfiles">Ajustes perfiles</option>
+                                            <option value="Códigos Google Analytics">Códigos Google Analytics</option>
+                                            <option value="Configuración visual de bolsas">Configuración visual de bolsas</option>
+                                            <option value="Html mails / firmas">Html mails / firmas</option>
+                                            <option value="Enrrutar plataforma">Enrrutar plataforma</option>
+                                            <option value="Recursos dashboard">Recursos dashboard</option>
+                                            <option value="Formulario de captura">Formulario de captura</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="">¿Cual?</label>
+                                        <input type="text" class="form-control" id="otra-categoria-3" name="otra-categoria-3">
+                                    </div>        
+                                </div>
+
+                                <div class="row mt-3" id="otra-pieza-div">
+                                    <div class="col-md-6">
+                                        <label for="">¿Cual?</label>
+                                        <input type="text" class="form-control" id="otra-pieza-3" name="otra-pieza-3">
+                                    </div>
+                                </div>
+        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Objetivo de la pieza</label>
+                                        <textarea name="objetivo-pieza-3" id="objetivo-pieza-3" rows="3" class="form-control" placeholder="Describe detalladamente el objetivo de la pieza. Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <label for="pieza-incluida-3">¿La pieza está incluida en la campaña?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pieza-incluida-3" id="pieza-incluida-si-3" value="Si">
+                                            <label class="form-check-label" for="pieza-incluida-si-3">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pieza-incluida-3" id="pieza-incluida-no-3" value="No">
+                                            <label class="form-check-label" for="pieza-incluida-no-3">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div id="archivo-div-3" style="display:none;">
+                                            <label for="archivo-3" style="font-size: medium;">Aquí debes cargar la imagen de aprobación de cotización por parte del cliente.<br></label>
+                                            <input type="file" id="archivo-3" name="archivo-3[]" class="form-control-file" multiple
+                                            accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                        </div>
+                                    </div>
+                                </div>                        
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Copy</label>
+                                        <textarea name="copy-3" id="copy-3" rows="2" class="form-control"
+                                            placeholder="Por favor déjanos el texto sugerido para la pieza. Ten en cuenta datos obligatorios como: Fechas, sitios, nombres, productos, información específica. Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">¿Se puede modificar el copy?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modficar-copy-3" id="modficar-copy-si-3" value="Si">
+                                            <label class="form-check-label" for="modificar-si-3">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modficar-copy-3" id="modficar-copy-no-3" value="No">
+                                            <label class="form-check-label" for="modficar-copy-no-3">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Detalles que debemos tener en cuenta</label>
+                                        <textarea name="detalles-3" id="detalles-3" rows="5" class="form-control"
+                                            placeholder="Si hay detalles específicos, por favor déjalos aquí ( Colores, imágenes, formato, recursos etc). Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                
+                                <div class="row mt-3">
+                                    <label for="">Aquí puedes cargar imagenes o archivos de apoyo para el requerimiento.</label> <br>
+                                    <div class="col-md-4 subir-recursos">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cargar-recursos-3" id="cargar-aqui-3" value="Cargar en form">
+                                            <label class="form-check-label" for="cargar-aqui-3">Cargar aquí</label>
+                                        </div>        
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cargar-recursos-3" id="cargar-wetransfer-3" value="Cargar en WeTransfer">
+                                            <label class="form-check-label" for="cargar-wetransfer-3">Cargar por WeTransfer</label>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-md-7">
+                                        <div id="recursos-aqui-3" style="display:none;">
+                                            <input type="file" id="archivo-apoyo-3" name="archivo-apoyo-3[]" class="form-control-file" multiple
+                                            accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                        </div>
+        
+                                        <div id="recursos-wetransfer-3" style="display:none;">
+                                            <label for="" style="font-size: medium;">Haz clic sobre el link y envía el archivo <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </section>
+                
+                        <section class="form4 mt-3" style="display: none;">
+                            <div>
+                               
+                                <h3>Pieza 4</h3>
+                                <script src="js/requerimientosForm4.js"></script>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label for="tipo-pieza-4">Categoría</label>
+                                        <select name="tipo-pieza-4" id="tipo-pieza-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona la categoría</option>
+                                            <option value="Banners">Banners</option>
+                                            <option value="WhatsApp">WhatsApp</option>
+                                            <option value="Presentaciones editables">Presentaciones editables</option>
+                                            <option value="Mockups">Mockups</option>
+                                            <option value="Piezas animadas y audio">Piezas animadas y audio</option>
+                                            <option value="Impresos">Impresos</option>
+                                            <option value="Nuevos proyectos">Nuevos proyectos</option>
+                                            <option value="Redes sociales">Redes sociales</option>
+                                            <option value="Administración plataforma">Administración plataforma</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c1-4">Banners</label>
+                                        <select name="tipo-pieza-c1-4" id="tipo-pieza-c1-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de banner</option>
+                                            <option value="Banners plataforma">Banners plataforma</option>
+                                            <option value="Banners WhatsApp">Banners WhatsApp</option>
+                                            <option value="Banners mailling">Banners mailling</option>
+                                            <option value="Banners calendario comercial">Banners calendario comercial</option>
+                                            <option value="Banners comunicación interna">Banners comunicación interna</option>
+                                            <option value="Banners infografías">Banners infografías</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c2-4">WhatsApp</label>
+                                        <select name="tipo-pieza-c2-4" id="tipo-pieza-c2-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Paso a paso general">Paso a paso general</option>
+                                            <option value="Stickers WhatsApp">Stickers WhatsApp</option>
+                                            <option value="Personaje WhatsApp">Personaje WhatsApp</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c3-4">Presentaciones editables</label>
+                                        <select name="tipo-pieza-c3-4" id="tipo-pieza-c3-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de ppt</option>
+                                            <option value="PPT templates retos">PPT templates retos</option>
+                                            <option value="PPT catálogo editable">PPT catálogo editable</option>
+                                            <option value="PPT presentación editable">PPT presentación editable</option>
+                                            <option value="PPT Plantillas bonos Kupaa">PPT Plantillas bonos Kupaa</option>
+                                            <option value="PPT comercial">PPT comercial</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c4-4">Mockups</label>
+                                        <select name="tipo-pieza-c4-4" id="tipo-pieza-c4-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de mockup</option>
+                                            <option value="Actualización contenido App">Mockups bonos Kupaa</option>
+                                            <option value="Mockups productos catálogo">Mockups productos catálogo</option>
+                                            <option value="Mockups actividades campañas">Mockups actividades campañas</option>
+                                            <option value="Mockups dotaciones FNB">Mockups dotaciones FNB</option>
+                                            <option value="Mockups merchandising">Mockups merchandising</option>
+                                            <option value="Mockups POP">Mockups POP</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c5-4">Piezas animadas y audio</label>
+                                        <select name="tipo-pieza-c5-4" id="tipo-pieza-c5-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Capsula animada">Capsula animada</option>
+                                            <option value="Capsula paso a paso">Capsula paso a paso</option>
+                                            <option value="Capsula general plataforma">Capsula general plataforma</option>
+                                            <option value="Gif animado">Gif animado</option>
+                                            <option value="Cuñas perifoneo">Cuñas perifoneo</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c6-4">Impresos</label>
+                                        <select name="tipo-pieza-c6-4" id="tipo-pieza-c6-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de impreso</option>
+                                            <option value="Diseño material impreso / POP">Diseño material impreso / POP</option>
+                                            <option value="Diseño caja (plano mecánico)">Diseño caja (plano mecánico)</option>
+                                            <option value="Impresión carnets">Impresión carnets</option>
+                                            <option value="Manual producto">Manual producto</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c7-4">Nuevos proyectos</label>
+                                        <select name="tipo-pieza-c7-4" id="tipo-pieza-c7-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                            <option value="Mockups App">Mockups App</option>
+                                            <option value="Propuesta logotipo">Propuesta logotipo</option>
+                                            <option value="Propuesta Kv">Propuesta Kv</option>
+                                            <option value="PPT propuesta licitación">PPT propuesta licitación</option>
+                                            <option value="Piezas digitales bingo">Piezas digitales bingo</option>
+                                            <option value="Diseño landing page">Diseño landing page</option>
+                                            <option value="Desarrollo de prototipos">Desarrollo de prototipos</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c8-4">Redes sociales</label>
+                                        <select name="tipo-pieza-c8-4" id="tipo-pieza-c8-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Publicaciones redes sociales">Publicaciones redes sociales</option>
+                                            <option value="Video TikTok">Video TikTok</option>
+                                            <option value="Historia">Historia</option>
+                                            <option value="Reel">Reel</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c9-4">Administración plataforma</label>
+                                        <select name="tipo-pieza-c9-4" id="tipo-pieza-c9-4" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Crear nueva campaña">Crear nueva campaña</option>
+                                            <option value="Publicar banners">Publicar banners</option>
+                                            <option value="Publicar T&C">Publicar T&C</option>
+                                            <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                            <option value="Mockups App">Mockups App</option>
+                                            <option value="Vestir plataforma">Vestir plataforma</option>
+                                            <option value="Vestir App">Vestir App</option>
+                                            <option value="Actualización contenido App">Actualización contenido App</option>
+                                            <option value="Seguimientos plataforma">Seguimientos plataforma</option>
+                                            <option value="Plantillas mail plataforma">Plantillas mail plataforma</option>
+                                            <option value="Punto plataforma">Punto plataforma</option>
+                                            <option value="Imágenes galeria carrusel">Imágenes galeria carrusel</option>
+                                            <option value="Responsive plataforma">Responsive plataforma</option>
+                                            <option value="Crear módulo">Crear módulo</option>
+                                            <option value="Ajustes plataforma">Ajustes plataforma</option>
+                                            <option value="Cronometro vencimiento puntos">Cronometro vencimiento puntos</option>
+                                            <option value="Configurar módulo conocimiento">Configurar módulo conocimiento</option>
+                                            <option value="Cargar curso módulo conocimiento">Cargar curso módulo conocimiento</option>
+                                            <option value="Ajustes módulo de conocimiento">Ajustes módulo de conocimiento</option>
+                                            <option value="Publicar calendario comercial">Publicar calendario comercial</option>
+                                            <option value="Crear módulos para perfiles">Crear módulos para perfiles</option>
+                                            <option value="Ajustes perfiles">Ajustes perfiles</option>
+                                            <option value="Códigos Google Analytics">Códigos Google Analytics</option>
+                                            <option value="Configuración visual de bolsas">Configuración visual de bolsas</option>
+                                            <option value="Html mails / firmas">Html mails / firmas</option>
+                                            <option value="Enrrutar plataforma">Enrrutar plataforma</option>
+                                            <option value="Recursos dashboard">Recursos dashboard</option>
+                                            <option value="Formulario de captura">Formulario de captura</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="">¿Cual?</label>
+                                        <input type="text" class="form-control" id="otra-categoria-4" name="otra-categoria-4">
+                                    </div>       
+                                </div>
+
+                                <div class="row mt-3" id="otra-pieza-div">
+                                    <div class="col-md-6">
+                                        <label for="">¿Cual?</label>
+                                        <input type="text" class="form-control" id="otra-pieza-4" name="otra-pieza-4">
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Objetivo de la pieza</label>
+                                        <textarea name="objetivo-pieza-4" id="objetivo-pieza-4" rows="3" class="form-control" placeholder="Describe detalladamente el objetivo de la pieza. Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <label for="pieza-incluida-4">¿La pieza está incluida en la campaña?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pieza-incluida-4" id="pieza-incluida-si-4" value="Si">
+                                            <label class="form-check-label" for="pieza-incluida-si-4">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pieza-incluida-4" id="pieza-incluida-no-4" value="No">
+                                            <label class="form-check-label" for="pieza-incluida-no-4">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div id="archivo-div-4" style="display:none;">
+                                            <label for="archivo-4" style="font-size: medium;">Aquí debes cargar la imagen de aprobación de cotización por parte del cliente.<br></label>
+                                            <input type="file" id="archivo-4" name="archivo-4[]" class="form-control-file" multiple
+                                            accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                        </div>
+                                    </div>
+                                </div>                        
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Copy</label>
+                                        <textarea name="copy-4" id="copy-4" rows="2" class="form-control"
+                                            placeholder="Por favor déjanos el texto sugerido para la pieza. Ten en cuenta datos obligatorios como: Fechas, sitios, nombres, productos, información específica. Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">¿Se puede modificar el copy?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modficar-copy-4" id="modficar-copy-si-4" value="Si">
+                                            <label class="form-check-label" for="modificar-si-4">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modficar-copy-4" id="modficar-copy-no-4" value="No">
+                                            <label class="form-check-label" for="modficar-copy-no-4">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Detalles que debemos tener en cuenta</label>
+                                        <textarea name="detalles-4" id="detalles-4" rows="5" class="form-control"
+                                            placeholder="Si hay detalles específicos, por favor déjalos aquí ( Colores, imágenes, formato, recursos etc). Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <label for="">Aquí puedes cargar imagenes o archivos de apoyo para el requerimiento.</label> <br>
+                                    <div class="col-md-4 subir-recursos">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cargar-recursos-4" id="cargar-aqui-4" value="Cargar en form">
+                                            <label class="form-check-label" for="cargar-aqui-4">Cargar aquí</label>
+                                        </div>        
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cargar-recursos-4" id="cargar-wetransfer-4" value="Cargar en WeTransfer">
+                                            <label class="form-check-label" for="cargar-wetransfer-4">Cargar por WeTransfer</label>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="col-md-7">
+                                        <div id="recursos-aqui-4" style="display:none;">
+                                            <input type="file" id="archivo-apoyo-4" name="archivo-apoyo-4[]" class="form-control-file" multiple
+                                            accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                        </div>
+                        
+                                        <div id="recursos-wetransfer-4" style="display:none;">
+                                            <label for="" style="font-size: medium;">Haz clic sobre el link y envía el archivo <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label>
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </section>
+                
+                        <section class="form5 mt-3" style="display: none;">
+                            <div>
+                                
+                                <h3>Pieza 5</h3>
+                                <script src="js/requerimientosForm5.js"></script>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label for="tipo-pieza-5">Categoría</label>
+                                        <select name="tipo-pieza-5" id="tipo-pieza-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona la categoría</option>
+                                            <option value="Banners">Banners</option>
+                                            <option value="WhatsApp">WhatsApp</option>
+                                            <option value="Presentaciones editables">Presentaciones editables</option>
+                                            <option value="Mockups">Mockups</option>
+                                            <option value="Piezas animadas y audio">Piezas animadas y audio</option>
+                                            <option value="Impresos">Impresos</option>
+                                            <option value="Nuevos proyectos">Nuevos proyectos</option>
+                                            <option value="Redes sociales">Redes sociales</option>
+                                            <option value="Administración plataforma">Administración plataforma</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c1-5">Banners</label>
+                                        <select name="tipo-pieza-c1-5" id="tipo-pieza-c1-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de banner</option>
+                                            <option value="Banners plataforma">Banners plataforma</option>
+                                            <option value="Banners WhatsApp">Banners WhatsApp</option>
+                                            <option value="Banners mailling">Banners mailling</option>
+                                            <option value="Banners calendario comercial">Banners calendario comercial</option>
+                                            <option value="Banners comunicación interna">Banners comunicación interna</option>
+                                            <option value="Banners infografías">Banners infografías</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c2-5">WhatsApp</label>
+                                        <select name="tipo-pieza-c2-5" id="tipo-pieza-c2-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Paso a paso general">Paso a paso general</option>
+                                            <option value="Stickers WhatsApp">Stickers WhatsApp</option>
+                                            <option value="Personaje WhatsApp">Personaje WhatsApp</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c3-5">Presentaciones editables</label>
+                                        <select name="tipo-pieza-c3-5" id="tipo-pieza-c3-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de ppt</option>
+                                            <option value="PPT templates retos">PPT templates retos</option>
+                                            <option value="PPT catálogo editable">PPT catálogo editable</option>
+                                            <option value="PPT presentación editable">PPT presentación editable</option>
+                                            <option value="PPT Plantillas bonos Kupaa">PPT Plantillas bonos Kupaa</option>
+                                            <option value="PPT comercial">PPT comercial</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c4-5">Mockups</label>
+                                        <select name="tipo-pieza-c4-5" id="tipo-pieza-c4-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de mockup</option>
+                                            <option value="Actualización contenido App">Mockups bonos Kupaa</option>
+                                            <option value="Mockups productos catálogo">Mockups productos catálogo</option>
+                                            <option value="Mockups actividades campañas">Mockups actividades campañas</option>
+                                            <option value="Mockups dotaciones FNB">Mockups dotaciones FNB</option>
+                                            <option value="Mockups merchandising">Mockups merchandising</option>
+                                            <option value="Mockups POP">Mockups POP</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c5-5">Piezas animadas y audio</label>
+                                        <select name="tipo-pieza-c5-5" id="tipo-pieza-c5-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Capsula animada">Capsula animada</option>
+                                            <option value="Capsula paso a paso">Capsula paso a paso</option>
+                                            <option value="Capsula general plataforma">Capsula general plataforma</option>
+                                            <option value="Gif animado">Gif animado</option>
+                                            <option value="Cuñas perifoneo">Cuñas perifoneo</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c6-5">Impresos</label>
+                                        <select name="tipo-pieza-c6-5" id="tipo-pieza-c6-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de impreso</option>
+                                            <option value="Diseño material impreso / POP">Diseño material impreso / POP</option>
+                                            <option value="Diseño caja (plano mecánico)">Diseño caja (plano mecánico)</option>
+                                            <option value="Impresión carnets">Impresión carnets</option>
+                                            <option value="Manual producto">Manual producto</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c7-5">Nuevos proyectos</label>
+                                        <select name="tipo-pieza-c7-5" id="tipo-pieza-c7-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                            <option value="Mockups App">Mockups App</option>
+                                            <option value="Propuesta logotipo">Propuesta logotipo</option>
+                                            <option value="Propuesta Kv">Propuesta Kv</option>
+                                            <option value="PPT propuesta licitación">PPT propuesta licitación</option>
+                                            <option value="Piezas digitales bingo">Piezas digitales bingo</option>
+                                            <option value="Diseño landing page">Diseño landing page</option>
+                                            <option value="Desarrollo de prototipos">Desarrollo de prototipos</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c8-5">Redes sociales</label>
+                                        <select name="tipo-pieza-c8-5" id="tipo-pieza-c8-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Publicaciones redes sociales">Publicaciones redes sociales</option>
+                                            <option value="Video TikTok">Video TikTok</option>
+                                            <option value="Historia">Historia</option>
+                                            <option value="Reel">Reel</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="tipo-pieza-c9-5">Administración plataforma</label>
+                                        <select name="tipo-pieza-c9-5" id="tipo-pieza-c9-5" class="form-control">
+                                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                            <option value="Crear nueva campaña">Crear nueva campaña</option>
+                                            <option value="Publicar banners">Publicar banners</option>
+                                            <option value="Publicar T&C">Publicar T&C</option>
+                                            <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                            <option value="Mockups App">Mockups App</option>
+                                            <option value="Vestir plataforma">Vestir plataforma</option>
+                                            <option value="Vestir App">Vestir App</option>
+                                            <option value="Actualización contenido App">Actualización contenido App</option>
+                                            <option value="Seguimientos plataforma">Seguimientos plataforma</option>
+                                            <option value="Plantillas mail plataforma">Plantillas mail plataforma</option>
+                                            <option value="Punto plataforma">Punto plataforma</option>
+                                            <option value="Imágenes galeria carrusel">Imágenes galeria carrusel</option>
+                                            <option value="Responsive plataforma">Responsive plataforma</option>
+                                            <option value="Crear módulo">Crear módulo</option>
+                                            <option value="Ajustes plataforma">Ajustes plataforma</option>
+                                            <option value="Cronometro vencimiento puntos">Cronometro vencimiento puntos</option>
+                                            <option value="Configurar módulo conocimiento">Configurar módulo conocimiento</option>
+                                            <option value="Cargar curso módulo conocimiento">Cargar curso módulo conocimiento</option>
+                                            <option value="Ajustes módulo de conocimiento">Ajustes módulo de conocimiento</option>
+                                            <option value="Publicar calendario comercial">Publicar calendario comercial</option>
+                                            <option value="Crear módulos para perfiles">Crear módulos para perfiles</option>
+                                            <option value="Ajustes perfiles">Ajustes perfiles</option>
+                                            <option value="Códigos Google Analytics">Códigos Google Analytics</option>
+                                            <option value="Configuración visual de bolsas">Configuración visual de bolsas</option>
+                                            <option value="Html mails / firmas">Html mails / firmas</option>
+                                            <option value="Enrrutar plataforma">Enrrutar plataforma</option>
+                                            <option value="Recursos dashboard">Recursos dashboard</option>
+                                            <option value="Formulario de captura">Formulario de captura</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-md-6" style="display: none;">
+                                        <label for="">¿Cual?</label>
+                                        <input type="text" class="form-control" id="otra-categoria-5" name="otra-categoria-5">
+                                    </div>        
+                                </div>
+
+                                <div class="row mt-3" id="otra-pieza-div">
+                                    <div class="col-md-6">
+                                        <label for="">¿Cual?</label>
+                                        <input type="text" class="form-control" id="otra-pieza-5" name="otra-pieza-5">
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Objetivo de la pieza</label>
+                                        <textarea name="objetivo-pieza-5" id="objetivo-pieza-5" rows="3" class="form-control" placeholder="Describe detalladamente el objetivo de la pieza. Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <label for="pieza-incluida-5">¿La pieza está incluida en la campaña?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pieza-incluida-5" id="pieza-incluida-si-5" value="Si">
+                                            <label class="form-check-label" for="pieza-incluida-si-5">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pieza-incluida-5" id="pieza-incluida-no-5" value="No">
+                                            <label class="form-check-label" for="pieza-incluida-no-5">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div id="archivo-div-5" style="display:none;">
+                                            <label for="archivo-5" style="font-size: medium;">Aquí debes cargar la imagen de aprobación de cotización por parte del cliente.<br></label>
+                                            <input type="file" id="archivo-5" name="archivo-5[]" class="form-control-file" multiple
+                                            accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                        </div>
+                                    </div>
+                                </div>                        
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Copy</label>
+                                        <textarea name="copy-5" id="copy-5" rows="2" class="form-control"
+                                            placeholder="Por favor déjanos el texto sugerido para la pieza. Ten en cuenta datos obligatorios como: Fechas, sitios, nombres, productos, información específica. Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">¿Se puede modificar el copy?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modficar-copy-5" id="modficar-copy-si-5" value="Si">
+                                            <label class="form-check-label" for="modificar-si-5">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modficar-copy-5" id="modficar-copy-no-5" value="No">
+                                            <label class="form-check-label" for="modficar-copy-no-5">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label for="">Detalles que debemos tener en cuenta</label>
+                                        <textarea name="detalles-5" id="detalles-5" rows="5" class="form-control"
+                                            placeholder="Si hay detalles específicos, por favor déjalos aquí ( Colores, imágenes, formato, recursos etc). Escribe mínimo 20 caracteres." minlength="20"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="row mt-3">
+                                    <label for="">Aquí puedes cargar imagenes o archivos de apoyo para el requerimiento.</label> <br>
+                                    <div class="col-md-4 subir-recursos">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cargar-recursos-5" id="cargar-aqui-5" value="Cargar en form">
+                                            <label class="form-check-label" for="cargar-aqui-5">Cargar aquí</label>
+                                        </div>        
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cargar-recursos-5" id="cargar-wetransfer-5" value="Cargar en WeTransfer">
+                                            <label class="form-check-label" for="cargar-wetransfer-5">Cargar por WeTransfer</label>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="col-md-7">
+                                        <div id="recursos-aqui-5" style="display:none;">
+                                            <input type="file" id="archivo-apoyo-5" name="archivo-apoyo-5[]" class="form-control-file" multiple
+                                            accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                        </div>
+                        
+                                        <div id="recursos-wetransfer-5" style="display:none;">
+                                            <label for="" style="font-size: medium;">Haz clic sobre el link y envía el archivo <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label>
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </section>
+
+
+        
+                        <div class="row mt-5">
+                            <div class="col-md-3">
+                                <label for="">Fecha estimada de entrega</label>
+                                <input type="date" class="form-control" id="fecha-entrega" name="fecha-entrega" required>
+                            </div>
+        
+                            <div class="col-md-4">
+                                <label for="">Quién solicita</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+        
+                            <div class="col-md-5">
+                                <label for="">Correo electrónico de quien hace la solicitud</label>
+                                <input type="email" class="form-control" id="correo-solicitante" name="correo-solicitante" required>
+                            </div> <br>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="">Copiar en este requerimiento a:</label>
+                                <div id="emails-container">
+                                    <input type="text" class="form-control" name="email-copia" id="email-copia" placeholder="Ingresa uno o varios correos separados por comas">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="formularios-container">
+                            <!-- Formularios se agregarán aquí -->
+                        </div>
+                        
+                        <!-- Botones de acción -->
+                        <div class="row mt-4">
+                            <ul class="pt-4 pb-4 ps-0 d-flex gap-4 flex-nowrap flex-row flex-lg-wrap align-items-middle align-items-lg-middle justify-content-center botones" id="botones-iniciales">
+                                <li><button type="submit" class="btn btn-primary">Enviar requerimiento</button></li>
+                                <!--<li><button type="button" class="btn btn-secondary" id="agregar-formulario">Solicitar otra pieza para el mismo cliente</button></li>-->
+                            </ul>
+                        </div>
+                    </form>
+        
+                </section>
+                <script src="js/requerimientos2.js"></script>
+            </div>
+
+            <div class="tab-content" id="tab2" style="display:none">
+                <link rel="stylesheet" href="css/licitaciones.css">
+                <!--<h2>Licitaciones</h2>-->
+                <section>
+                    <form method="post" action="licitaciones.php" class="formLicitaciones" enctype="multipart/form-data" id="formLicitaciones">
+                        <div class="col-md-12">
+                            <h4>INFORMACIÓN GENERAL</h4>
+                            <div class="row mt-3">
+                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre-cliente">Nombre de cliente</label>
+                                        <input type="text" id="nombre-cliente" name="nombre-cliente" class="form-control" required>
+                                    </div>
+                                </div>
+                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre-campana">Nombre de la campaña:</label>
+                                        <input type="text" id="nombre-campana" name="nombre-campana" class="form-control" required>
+                                    </div>
+                                </div>
+                
+                            </div>
+                
+                            <div class="row mt-3">
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="pais">País:</label>
+                                        <select id="pais" class="form-control" name="pais" required>
+                                            <option value="">Seleccionar país</option>
+                                        </select>
+                                    </div>
+                                </div>
+                
+                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="marcas">Marcas a impactar:</label>
+                                        <input type="text" id="marcas" name="marcas" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="personas">Personas a impactar:</label>
+                                        <input type="text" id="personas" name="personas" class="form-control number"
+                                            placeholder="Número de personas" required>
+                                    </div>
+                                </div>
+                
+                                
+                            </div>
+                
+                            <div class="row mt-3">
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="tipo">Tipo de campaña:</label>
+                                        <select id="tipo" name="tipo" class="form-control" required>
+                                            <option value="">Seleccionar tipo de campaña</option>
+                                            <option value="Programa de incentivos">Programa de incentivos</option>
+                                            <option value="Programa de fidelizacion">Programa de fidelización</option>
+                                            <option value="Campaña de visibilidad">Campaña visibilidad</option>
+                                        </select>
+                                    </div>
+                                </div>
+                
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label>Fuerza de ventas:</label><br>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="interna"
+                                                        name="tipo_ffvv[]" value="Interna">
+                                                    <label class="form-check-label" for="interna">Interna</label><br>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="externa"
+                                                        name="tipo_ffvv[]" value="Externa">
+                                                    <label class="form-check-label" for="externa">Externa</label><br>
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-md-5">
+                                                <label>Canal de ventas:</label><br>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="distribuidores"
+                                                        name="canal_ffvv[]" value="Distribuidores">
+                                                    <label class="form-check-label"
+                                                        for="distribuidores">Distribuidores</label><br>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="moderno"
+                                                        name="canal_ffvv[]" value="Moderno">
+                                                    <label class="form-check-label" for="moderno">Moderno</label><br>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="tradicional"
+                                                        name="canal_ffvv[]" value="Tradicional"
+                                                        onclick="seleccionarTradicional()">
+                                                    <label class="form-check-label" for="tradicional">Tradicional</label><br>
+                                                </div>
+                                                <ul style="list-style-type: none;">
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="tienda_barrio"
+                                                                name="canal_ffvv[]" value="Tiendas de barrio"
+                                                                onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label" for="tienda_barrio">Tiendas
+                                                                de barrio</label><br>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="ferreterias_pequenas" name="canal_ffvv[]"
+                                                                value="Ferreterías pequeñas" onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label"
+                                                                for="ferreterias_pequenas">Ferreterías
+                                                                pequeñas</label><br>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="panaleras"
+                                                                name="canal_ffvv[]" value="Pañaleras"
+                                                                onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label"
+                                                                for="panaleras">Pañaleras</label><br>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="farmacias"
+                                                                name="canal_ffvv[]" value="Farmacias independientes"
+                                                                onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label" for="farmacias">Farmacias
+                                                                independientes</label><br>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="minimercados_independientes" name="canal_ffvv[]"
+                                                                value="Minimercados independientes"
+                                                                onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label"
+                                                                for="minimercados_independientes">Minimercados
+                                                                independientes</label><br>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Cliente final</label><br>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="consumidor_shopper"
+                                                        name="cliente_final[]" value="Consumidor o Shoper">
+                                                    <label class="form-check-label" for="consumidor_shopper">Consumidor o
+                                                        Shopper</label><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="col-md-12 mt-3">
+                
+                            <h4>CARACTERÍSTICAS DEL PROYECTO</h4>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="objetivo_general">Racional</label>
+                                        <textarea id="objetivo_general" rows="3" class="form-control" name="objetivo_general"
+                                            placeholder="Indícanos el objetivo general que buscas conseguir con este proyecto." minlength="30"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="target_group">Target group:</label>
+                                        <textarea id="target_group" rows="2" class="form-control" name="target_group"
+                                            placeholder="Define el perfil demográfico de los participantes de la campaña: edad, sexo, gustos, nivel de educación, rutina, etc." minlength="30"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>¿Qué busco transmitir al participante con esta campaña?</label>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <textarea id="sienta" rows="3" class="form-control" placeholder="Sienta..."
+                                                    name="sienta" minlength="20" required></textarea>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <textarea id="piense" rows="3" class="form-control" placeholder="Piense..."
+                                                    name="piense" minlength="20" required></textarea>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <textarea id="haga" rows="3" class="form-control" placeholder="Haga..."
+                                                    name="haga" minlength="20" required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                        </div>
+                
+                        <div class="col-md-12 mt-3">
+                
+                            <h4>DETALLES DEL CONCEPTO (BRAINING STORM)</h4>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="pautas">¿Cuáles son las pautas que debemos tener en cuenta para el
+                                            desarrollo del concepto?</label>
+                                        <textarea id="pautas" name="pautas" class="form-control" rows="2" minlength="30" required></textarea>
+                                    </div>
+                                </div><br>
+                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="tono">¿Qué tono o imagen te gustaría mostrar?</label>
+                                        <textarea type="text" id="tono" name="tono" class="form-control" rows="2" minlength="20"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="concepto_tematica">¿Tienes algún concepto o temática en mente? (Ejemplo: Deportes, Desafío, Conquista, Guerreros)</label><br>
+
+                                        <input type="radio" id="concepto_si" name="concepto" value="Si"
+                                            onchange="mostrarCampoCuál('concepto_tematica_cual')">
+                                            <label class="form-check-label" for="concepto_si">Si</label>
+
+                                        <input type="radio" id="concepto_no" name="concepto" value="No"
+                                            onchange="ocultarCampoCuál('concepto_tematica_cual')">
+                                            <label class="form-check-label" for="concepto_no">No</label>
+
+                                        <textarea id="concepto_tematica_cual" name="concepto_tematica_cual" class="form-control" placeholder="¿Cuál?" style="display: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="preferencia_color">¿Tienes algunas preferencias de color?</label><br>
+                                        
+                                        <input type="radio" id="preferencia_color_si" name="preferencia" value="Si" onchange="mostrarCampoCuál('preferencia-color-cual')">
+                                        
+                                        <label class="form-check-label" for="preferencia_color_si">Si</label>
+
+                                        <input type="radio" id="preferencia_color_no" name="preferencia" value="No" onchange="ocultarCampoCuál('preferencia-color-cual')">
+                                        <label class="form-check-label" for="preferencia_color_no">No</label>
+
+                                        <textarea id="preferencia-color-cual" name="preferencia_color_cual" class="form-control" placeholder="¿Cuál?" style="display: none;" ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="logo">¿Hay algún elemento que quisieras incluir en el logo?</label><br>
+                                        <input type="radio" id="logo_si" name="logo" value="Si"
+                                            onchange="mostrarCampoCuál('logo-cual')"> <label class="form-check-label"
+                                            for="logo_si">Si</label>
+                                        <input type="radio" id="logo_no" name="logo" value="No"
+                                            onchange="ocultarCampoCuál('logo-cual')"> <label class="form-check-label"
+                                            for="logo_no">No</label>
+                                        <textarea id="logo-cual" name="logo_cual" class="form-control" placeholder="¿Cuál?"
+                                            style="display: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <label for="temas_caracteristicas">¿Qué temas o elementos característicos de la marca
+                                        debemos tener en cuenta en el desarrollo de la ppt?</label><br>
+                                    <textarea id="temas_caracteristicas" name="temas_caracteristicas" minlength="20" required
+                                        class="form-control"></textarea>
+                                </div>
+                            </div>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <label for="elementos_no">¿Qué elementos NO debe tener la ppt?</label><br>
+                                    <textarea id="elementos_no" name="elementos_no" required
+                                        placeholder="No poner la marca junto a…, ni vincularla con temas religiosos, no poner la marca en el piso, siempre poner la frase de campaña, etc."
+                                        class="form-control" minlength="20"></textarea>
+                                </div>
+                            </div>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <label for="inspiracion">Inspiración</label><br>
+                                    <textarea id="inspiracion" name="inspiracion" required
+                                        placeholder="Cualquier idea que pueda ayudar al éxito de la campaña / películas, fotos, revistas, frases, sugerencias son un acelerador para nuestra creatividad."
+                                        class="form-control" minlength="30"></textarea>
+                                </div>
+                            </div><br>
+                
+                        </div>
+                
+                        <div class="col-md-12 mt-3">
+                
+                            <h4>DETALLES DE LA PPT</h4>
+                
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <h5>Cuéntanos qué mockups necesitas:</h5>
+
+                                    <div class="row mt-3">
+                                        <h5>Desktop</h5>
+                                        <div class="col-md-3">                                            
+                                            <div class="form-check">
+                                                <input type="checkbox" id="login-desktop" name="necesidad-desktop[]"
+                                                    value="Login" class="form-check-input">
+                                                <label class="form-check-label" for="login-desktop">Login</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="home-desktop" name="necesidad-desktop[]"
+                                                    value="Home" class="form-check-input">
+                                                <label class="form-check-label" for="home-desktop">Home</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="seguimientos-desktop" name="necesidad-desktop[]"
+                                                    value="Seguimientos" class="form-check-input">
+                                                <label class="form-check-label" for="seguimientos-desktop">Seguimientos</label>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-web[]" id="concursos-web" value="Concursos" class="form-check-input">
+                                                <label for="concursos-web" class="form-check-label">Concursos</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" id="exhibiciones-desktop" name="necesidad-desktop[]"
+                                                    value="Exhibiciones" class="form-check-input">
+                                                <label class="form-check-label" for="exhibiciones-desktop">Exhibiciones</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="facturas-desktop" name="necesidad-desktop[]"
+                                                    value="Facturas" class="form-check-input">
+                                                <label class="form-check-label" for="facturas-desktop">Facturas</label>
+                                            </div> 
+                                            
+                                        </div>
+                
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="conocimiento-desktop" name="necesidad-desktop[]"
+                                                    value="Conocimiento" class="form-check-input">
+                                                <label class="form-check-label" for="conocimiento-desktop"
+                                                    value="Conocimiento">Conocimiento</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" id="motor-reservas-desktop" name="necesidad-desktop[]"
+                                                    value="Motor de reservas" class="form-check-input">
+                                                <label class="form-check-label" for="motor-reservas-desktop"
+                                                    value="Motor de reservas">Motor de reservas</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="catalogo-desktop" name="necesidad-desktop[]"
+                                                    value="Catálogo" class="form-check-input">
+                                                <label class="form-check-label" for="catalogo-desktop"
+                                                    value="Catálogo">Catálogo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <h5>App</h5>
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="login-app" name="necesidad-app[]"
+                                                    value="Login" class="form-check-input">
+                                                <label class="form-check-label" for="login-app">Login</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-app[]" id="home-app" value="Home" class="form-check-input">
+                                                <label for="home-app" class="form-check-label">Home</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-app[]" id="seguimientos-app" value="Seguimientos" class="form-check-input">
+                                                <label for="seguimientos-app" class="form-check-label">Seguimientos</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-app[]" id="concursos-app" value="Concursos" class="form-check-input">
+                                                <label for="concursos-app" class="form-check-label">Concursos</label>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-check">
+                                                    <input type="checkbox" name="necesidad-app[]" id="exhibiciones-app" value="Exhibiciones" class="form-check-input">
+                                                    <label for="exhibiciones-app" class="form-check-label">Exhibiciones</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" name="necesidad-app[]" id="facturas-app" value="Facturas" class="form-check-input">
+                                                    <label for="facturas-app" class="form-check-label">Facturas</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-app[]" id="conocimiento-app" value="Conocimiento" class="form-check-input">
+                                                <label for="conocimiento-app" class="form-check-label">Conocimiento</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-app[]" id="motor-reservas-app" value="Motor de reservas" class="form-check-input">
+                                                <label for="motor-reservas-app" class="form-check-label">Motor de reservas</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-app[]" id="catalogo-app" value="Catálogo" class="form-check-input">
+                                                <label for="catalogo-app" class="form-check-label">Catálogo</label>
+                                            </div>
+                                        </div>
+                                    </div>                                
+
+                                    <div class="row mt-3">
+                                        <h5>Actividades</h5>
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-actividades[]" id="bingo" value="Bingo" class="form-check-input">
+                                                <label for="bingo" class="form-check-label">Bingo</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-actividades[]" id="mockup-ruleta" value="Mockup ruleta" class="form-check-input">
+                                                <label for="mockup-ruleta" class="form-check-label">Ruleta</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-actividades[]" id="camion-premios" value="Camión de premios" class="form-check-input">
+                                                <label for="camion-premios" class="form-check-label">Camión de premios</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-actividades[]" id="ciclon" value="Ciclón" class="form-check-input">
+                                                <label for="ciclon" class="form-check-label">Ciclón</label>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-actividades[]" id="quiere-ser-millonario" value="¿Quién quiere ser millonario?" class="form-check-input">
+                                                <label for="quiere-ser-millonario" class="form-check-label">¿Quién quiere ser millonario?</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-actividades[]" id="raspa-gana" value="Raspa y gana" class="form-check-input">
+                                                <label for="raspa-gana" class="form-check-label">Raspa y gana</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-actividades[]" id="quizziz" value="Quizziz" class="form-check-input">
+                                                <label for="quizziz" class="form-check-label">Quizziz</label>
+                                            </div>
+                                        </div>                                           
+                                        
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <h5>Otros mockups</h5>
+                                        <div class="col-md-3 ">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="mockups-whatsapp" value="WhatsApp" class="form-check-input">
+                                                <label for="mockups-whatsapp" class="form-check-label">WhatsApp</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="merchandising-mockups" value="Merchandising" class="form-check-input">
+                                                <label for="merchandising-mockups" class="form-check-label">Merchandising</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="mencion-honor-mockups" value="Mención de honor" class="form-check-input">
+                                                <label for="mencion-honor-mockups" class="form-check-label">Mención de honor</label>
+                                            </div>                                            
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="video-lanzamiento-mockups" value="Video de lanzamiento" class="form-check-input">
+                                                <label for="video-lanzamiento-mockups" class="form-check-label">Video de lanzamiento</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="viajes-experiencias-mockups" value="Viajes y experiencias" class="form-check-input">
+                                                <label for="viajes-experiencias-mockups" class="form-check-label">Viajes y experiencias</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="bonos-mockups" value="Bonos" class="form-check-input">
+                                                <label for="bonos-mockups" class="form-check-label">Bonos</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="pago-servicios-mockups" value="Pago de servicios públicos" class="form-check-input">
+                                                <label for="pago-servicios-mockups" class="form-check-label">Pago de servicios públicos</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="remodela-hogar-mockups" value="Remodela tu hogar" class="form-check-input">
+                                                <label for="remodela-hogar-mockups" class="form-check-label">Remodela tu hogar</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" name="necesidad-otros-mockups[]" id="codigo-qr-mockups" value="Código QR" class="form-check-input">
+                                                <label for="codigo-qr-mockups" class="form-check-label">Código QR</label>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                
+                                    <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="necesidad-otros" name="necesidad-otros"
+                                                    placeholder="Otro ¿Cuál?"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div><br>
+                
+                        <h4>Punto</h4>
+                
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="valor_punto">¿Tienes algún punto en mente?</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="radio" type="radio" id="valor_punto_si" name="valor_punto" value="Si"
+                                            onchange="mostrarCampoCuál('valor_punto_cual')">
+                                        <label class="form-check-label" for="valor_punto_si">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="radio" type="radio" id="valor_punto_no" name="valor_punto" value="No"
+                                            onchange="ocultarCampoCuál('valor_punto_cual')">
+                                        <label class="form-check-label" for="valor_punto_no">No</label>
+                                    </div>
+                                    <textarea class="form-control" id="valor_punto_cual" name="valor_punto_cual"
+                                        placeholder="¿Cuál?" style="display: none;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <h4>Recursos</h4>
+                            <label for="">Aquí puedes cargar el borrador de la ppt, imágenes o archivos de apoyo para el requerimiento.</label> <br>
+                            <div class="col-md-4 subir-recursos-licitacion mt-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cargar-recursos-licitacion" id="cargar-aqui-licitacion" value="Cargar en form" required>
+                                    <label class="form-check-label" for="cargar-aqui-licitacion">Cargar aquí</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cargar-recursos-licitacion" id="cargar-wetransfer-licitacion" value="Cargar en WeTransfer">
+                                    <label class="form-check-label" for="cargar-wetransfer-licitacion">Cargar por WeTransfer</label>
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-7">
+                                <div id="recursos-aqui-licitacion" style="display:none;">
+                                    <input type="file" id="archivo-apoyo-licitacion" name="archivo-apoyo-licitacion[]" class="form-control-file" multiple
+                                    accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                    <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                </div>
+                    
+                                <div id="recursos-wetransfer-licitacion" style="display:none;">
+                                    <label for="" style="font-size: medium;">Haz clic sobre el link y envía el archivo <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-3">
+                                <label for="">Fecha estimada de entrega</label>
+                                <input type="date" class="form-control" id="fecha-entrega-licitacion" name="fecha-entrega-licitacion" required>
+                            </div>
+        
+                            <div class="col-md-4">
+                                <label for="">Quién solicita</label>
+                                <input type="text" class="form-control" id="nombre-licitacion" name="nombre-licitacion" required>
+                            </div>
+        
+                            <div class="col-md-5">
+                                <label for="">Correo electrónico de quien hace la solicitud</label>
+                                <input type="email" class="form-control" id="correo-solicitante-licitacion" name="correo-solicitante-licitacion" required>
+                            </div> <br>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="">Copiar en este requerimiento a:</label>
+                                <div id="emails-container">
+                                    <input type="text" class="form-control" name="email-copia-licitacion" id="email-copia-licitacion" placeholder="Ingresa uno o varios correos separados por comas">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <ul class="pt-4 pb-4 ps-0 d-flex gap-4 flex-nowrap flex-row flex-lg-wrap align-items-middle align-items-lg-middle justify-content-center botones" id="botones-iniciales">
+                                <li><button type="submit" class="btn btn-primary">Enviar solicitud</button></li>
+                            </ul>
+                        </div>
+
+                    </form>
+                </section>
+                <script src="js/licitaciones.js"></script>
+            </div>
+
+            <div class="tab-content" id="tab3" style="display:none">
+                <!--<link rel="stylesheet" href="nuevos-proyectos.css">
+                <h2>Nuevos Proyectos</h2>
+                <p>Contenido de la pestaña Nuevos Proyectos...</p>
+                <script src="nuevos-proyectos.js"></script>-->
+            </div>
+
+            <div class="tab-content" id="tab4" style="display:none">
+                <!--<link rel="stylesheet" href="cotizaciones.css">
+                <h2>Cotizaciones</h2>
+                <p>Contenido de la pestaña Cotizaciones...</p>
+                <script src="cotizaciones.js"></script>-->
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>x
+</body>
+</html>

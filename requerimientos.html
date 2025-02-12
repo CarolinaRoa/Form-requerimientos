@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const input = document.getElementById('archivo');
+
+            input.addEventListener('change', function () {
+                const files = this.files;
+                const allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+                const maxSize = 10 * 1024 * 1024; // 10MB en bytes
+
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+
+                    // Verificar tipo de archivo
+                    if (!allowedTypes.includes(file.type)) {
+                        alert('Error: Solo se permiten archivos JPG, PNG o GIF.');
+                        this.value = ''; // Limpiar el input de archivos seleccionados
+                        return;
+                    }
+
+                    // Verificar tamaño del archivo
+                    if (file.size > maxSize) {
+                        alert('Error: El archivo ' + file.name + ' es demasiado grande, máximo 10MB permitido.');
+                        this.value = ''; // Limpiar el input de archivos seleccionados
+                        return;
+                    }
+
+                    // Aquí puedes realizar más validaciones si lo necesitas
+                    // Por ejemplo, mostrar información de los archivos seleccionados
+                    console.log('Nombre: ' + file.name + ', Tipo: ' + file.type + ', Tamaño: ' + file.size + ' bytes');
+                }
+            });
+
+            const clienteCampaña = document.getElementById('cliente-campaña');
+            const otroClienteCampaña = document.getElementById('otro-cliente-campaña');
+            const tipoPieza = document.getElementById('tipo-pieza');
+            const tipoPiezaC1 = document.getElementById('tipo-pieza-c1');
+            const tipoPiezaC2 = document.getElementById('tipo-pieza-c2');
+            const tipoPiezaC3 = document.getElementById('tipo-pieza-c3');
+            const tipoPiezaC4 = document.getElementById('tipo-pieza-c4');
+            const tipoPiezaC5 = document.getElementById('tipo-pieza-c5');
+            const otraCategoria = document.getElementById('otra-categoria');
+            const otroTipoPieza = document.getElementById('otro-tipo-pieza');
+
+            function toggleOtroField(element, targetField) {
+                if (element.value === 'Otro') {
+                    targetField.parentElement.style.display = 'block';
+                } else {
+                    targetField.parentElement.style.display = 'none';
+                }
+            }
+
+            clienteCampaña.addEventListener('change', function () {
+                toggleOtroField(this, otroClienteCampaña);
+            });
+
+            tipoPieza.addEventListener('change', function () {
+                // Ocultar todos los campos de tipo de pieza
+                tipoPiezaC1.parentElement.style.display = 'none';
+                tipoPiezaC2.parentElement.style.display = 'none';
+                tipoPiezaC3.parentElement.style.display = 'none';
+                tipoPiezaC4.parentElement.style.display = 'none';
+                tipoPiezaC5.parentElement.style.display = 'none';
+
+                // Mostrar el campo correspondiente al tipo de pieza seleccionado
+                if (this.value === 'Categoría 1') {
+                    tipoPiezaC1.parentElement.style.display = 'block';
+                } else if (this.value === 'Categoría 2') {
+                    tipoPiezaC2.parentElement.style.display = 'block';
+                } else if (this.value === 'Categoría 3') {
+                    tipoPiezaC3.parentElement.style.display = 'block';
+                } else if (this.value === 'Categoría 4') {
+                    tipoPiezaC4.parentElement.style.display = 'block';
+                } else if (this.value === 'Categoría 5') {
+                    tipoPiezaC5.parentElement.style.display = 'block';
+                }
+            });
+
+            // Función para mostrar u ocultar el div de archivo basado en la selección de radio buttons
+            const piezaIncluidaSi = document.getElementById('pieza-incluida-si');
+            const piezaIncluidaNo = document.getElementById('pieza-incluida-no');
+            const archivoDiv = document.getElementById('archivo-div');
+
+            function toggleArchivoDiv() {
+                if (piezaIncluidaNo.checked) {
+                    archivoDiv.style.display = 'block';
+                } else {
+                    archivoDiv.style.display = 'none';
+                }
+            }
+
+            piezaIncluidaSi.addEventListener('change', toggleArchivoDiv);
+            piezaIncluidaNo.addEventListener('change', toggleArchivoDiv);
+            toggleArchivoDiv(); // Llamar la función al cargar la página para establecer el estado inicial
+
+            // Llamar las funciones de inicialización al cargar la página
+            toggleOtroField(clienteCampaña, otroClienteCampaña);
+            tipoPieza.dispatchEvent(new Event('change')); // Forzar el evento change para inicializar el tipo de pieza adecuado
+        });
+    </script>
+
+    <title>Requerimientos de diseño</title>
+</head>
+
+<body>
+    <div class="cabecera">
+
+    </div>
+    <div class="container">
+        <section>
+            <form method="post" action="enviar_correo.php" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="cliente-campaña">Cliente y/o campaña</label>
+                        <select name="cliente-campaña" id="cliente-campaña" class="form-control">
+                            <option value="" disabled selected>Selecciona cliente y/o campaña</option>
+                            <option value="Licitaciones">Licitaciones</option>
+                            <option value="Almacenamiento">Almacenamiento</option>
+                            <option value="Apex - Fuerza Apex">Apex - Fuerza Apex</option>
+                            <option value="B&D - Industrias Imparables">B&D - Industrias Imparables</option>
+                            <option value="B&D - Yellow Force">B&D - Yellow Force</option>
+                            <option value="Bavaria - Bavaria a todo corazón">Bavaria - Bavaria a todo corazón</option>
+                            <option value="Bavaria - Invencibles">Bavaria - Invencibles</option>
+                            <option value="Bayport - Bayport plus">Bayport - Bayport plus</option>
+                            <option value="Brila - Brilla tu corazón">Brilla - Brilla tu corazón</option>
+                            <option value="Caja Social">Caja Social</option>
+                            <option value="Campañas Gloria">Campañas Gloria</option>
+                            <option value="Campañas Henkel">Campañas Henkel</option>
+                            <option value="Campañas Nestle - Culinaria">Campañas Nestle - Culinaria</option>
+                            <option value="Campañas Nestle - El Rodeo">Campañas Nestle - El Rodeo</option>
+                            <option value="Campañas Nestle - Klim">Campañas Nestle - Klim</option>
+                            <option value="Campañas Nestle - Milo Coins">Campañas Nestle - Milo Coins</option>
+                            <option value="Campañas Nestle - Natures Heart">Campañas Nestle - Natures Heart</option>
+                            <option value="Campañas Nestle - Playa limpia Cososette">Campañas Nestle - Playa limpia Cososette</option>
+                            <option value="Casa Luker">Casa Luker</option>
+                            <option value="CBC Perú - Equipazo 2024">CBC Perú - Equipazo 2024</option>
+                            <option value="Coca Cola Col - Detallistas">Coca Cola Col - Detallistas</option>
+                            <option value="Coca Cola Col - Fuerza de ventas">Coca Cola Col - Fuerza de ventas</option>
+                            <option value="Coca Cola Col - Repisadores">Coca Cola Col - Repisadores</option>
+                            <option value="Coca Cola CR - Gana +">Coca Cola CR - Gana +</option>
+                            <option value="Coca Cola GU - Premia Puntos">Coca Cola GU - Premia Puntos</option>
+                            <option value="Coca Cola GU - Premia Puntos">Coca Cola GU - Premia Puntos</option>
+                            <option value="Compras">Compras</option>
+                            <option value="Comunicaciones">Comunicaciones</option>
+                            <option value="Diageo by Sin Límites">Diageo by Sin Límites</option>
+                            <option value="Diageo CA - Visionarios Recargados">Diageo CA - Visionarios Recargados</option>
+                            <option value="Diageo Col - Caminantes">Diageo Col - Caminantes</option>
+                            <option value="Diageo Col - Legado de ganadores">Diageo Col - Legado de ganadores</option>
+                            <option value="Diversey Col - Juntos + Fuertes">Diversey Col - Juntos + Fuertes</option>
+                            <option value="Diversey Ecu - Juntos + Fuertes">Diversey Ecu - Juntos + Fuertes</option>
+                            <option value="Dos Pinos CR - La gran carrera">Dos Pinos CR - La gran carrera</option>
+                            <option value="E-commerce">E-commerce</option>
+                            <option value="Eficacia - Incentiva-t">Eficacia - Incentiva-t</option>
+                            <option value="FEC">FEC</option>
+                            <option value="FNB">FNB</option>
+                            <option value="Gloria - El sabor de la gloria">Gloria - El sabor de la gloria</option>
+                            <option value="Grupo Merpes Colombia">Grupo Merpes Colombia</option>
+                            <option value="Grupo Merpes Costa Rica">Grupo Merpes Costa Rica</option>
+                            <option value="Grupo Merpes Ecuador">Grupo Merpes Ecuador</option>
+                            <option value="Grupo Merpes Guatemala">Grupo Merpes Guatemala</option>
+                            <option value="Grupo Merpes Perú">Grupo Merpes Perú</option>
+                            <option value="Grupo Merpes Perú">Grupo Merpes Perú</option>
+                            <option value="Grupo Merpes - Invencibles">Grupo Merpes - Invencibles</option>
+                            <option value="Impocali - Redes de fidelización">Impocali - Redes de fidelización</option>
+                            <option value="Institucional">Institucional</option>
+                            <option value="Kimberly Clark Col - Conekctate">Kimberly Clark Col - Conekctate</option>
+                            <option value="Kimberly Clark Col - Invencibles">Kimberly Clark Col - Invencibles</option>
+                            <option value="Kimberly Clark Col - Konquistadores">Kimberly Clark Col - Konquistadores</option>
+                            <option value="Kimberly Clark Perú - Escuadrón">Kimberly Clark Perú - Escuadrón</option>
+                            <option value="Lactalis - Triathlon">Lactalis - Triathlon</option>
+                            <option value="Levapan - Levaplus">Levapan - Levaplus</option>
+                            <option value="Logística">Logística</option>
+                            <option value="Los Propios">Los Propios</option>
+                            <option value="Mertec">Mertec</option>
+                            <option value="Nestle - Confiteros de corazón">Nestle - Confiteros de corazón</option>
+                            <option value="Newell - La venta de oro">Newell - La venta de oro</option>
+                            <option value="Pallevarlo">Pallevarlo</option>
+                            <option value="Plataformas transversal">Plataformas transversal</option>
+                            <option value="PMI - El propio comercial">PMI - El propio comercial</option>
+                            <option value="Red Llantas - Red Puntos">Red Llantas - Red Puntos</option>
+                            <option value="SC Johnson - Plan Conquista">SC Johnson - Plan Conquista</option>
+                            <option value="Softys - Estrellas Softys">Softys - Estrellas Softys</option>
+                            <option value="Softys - Héroes Softys">Softys - Héroes Softys</option>
+                            <option value="Team Foods - Guardianes / Paniclub">Team Foods - Guardianes / Paniclub</option>
+                            <option value="Terpel - Tienda Terpel">Terpel - Tienda Terpel</option>
+                            <option value="Valvoline - Club de pilotos">Valvoline - Club de pilotos</option>
+                            <option value="Vanti - Full Servicio">Vanti - Full Servicio</option>
+                            <option value="Web Confiteria Nestle">Web Confiteria Nestle</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="">Fecha de la solicitud</label>
+                        <input type="date" class="form-control" id="fecha-solicitud" name="fecha-solicitud" required>
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">¿Cual?</label>
+                        <input type="text" class="form-control" id="otro-cliente-campaña" name="otro-cliente-campaña">
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="tipo-pieza">Categoría</label>
+                        <select name="tipo-pieza" id="tipo-pieza" class="form-control">
+                            <option value="" disabled selected>Selecciona la categoría</option>
+                            <option value="Categoría 1">Categoría 1</option>
+                            <option value="Categoría 2">Categoría 2</option>
+                            <option value="Categoría 3">Categoría 3</option>
+                            <option value="Categoría 4">Categoría 4</option>
+                            <option value="Categoría 5">Categoría 5</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="tipo-pieza-c1">Tipo de pieza C1</label>
+                        <select name="tipo-pieza-c1" id="tipo-pieza-c1" class="form-control">
+                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                            <option value="Actualización contenido App">Actualización contenido App</option>
+                            <option value="Actualizaciones SharePoint intranet">Actualizaciones SharePoint intranet</option>
+                            <option value="Actualizaciones Wordpress">Actualizaciones Wordpress</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="tipo-pieza-c2">Tipo de pieza C2</label>
+                        <select name="tipo-pieza-c2" id="tipo-pieza-c2" class="form-control">
+                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                            <option value="Actualización contenido App">Actualización contenido App</option>
+                            <option value="Actualizaciones SharePoint intranet">Actualizaciones SharePoint intranet</option>
+                            <option value="Actualizaciones Wordpress">Actualizaciones Wordpress</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="tipo-pieza-c3">Tipo de pieza C3</label>
+                        <select name="tipo-pieza-c3" id="tipo-pieza-c3" class="form-control">
+                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                            <option value="Actualización contenido App">Actualización contenido App</option>
+                            <option value="Actualizaciones SharePoint intranet">Actualizaciones SharePoint intranet</option>
+                            <option value="Actualizaciones Wordpress">Actualizaciones Wordpress</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="tipo-pieza-c4">Tipo de pieza C4</label>
+                        <select name="tipo-pieza-c4" id="tipo-pieza-c4" class="form-control">
+                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                            <option value="Actualización contenido App">Actualización contenido App</option>
+                            <option value="Actualizaciones SharePoint intranet">Actualizaciones SharePoint intranet</option>
+                            <option value="Actualizaciones Wordpress">Actualizaciones Wordpress</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="tipo-pieza-c5">Tipo de pieza C5</label>
+                        <select name="tipo-pieza-c5" id="tipo-pieza-c5" class="form-control">
+                            <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                            <option value="Actualización contenido App">Actualización contenido App</option>
+                            <option value="Actualizaciones SharePoint intranet">Actualizaciones SharePoint intranet</option>
+                            <option value="Actualizaciones Wordpress">Actualizaciones Wordpress</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Objetivo de la pieza</label>
+                        <textarea name="objetivo-pieza" id="objetivo-pieza" rows="5" class="form-control" placeholder="Describe detalladamente el objetivo de la pieza." required minlength="100"></textarea>
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="pieza-incluida">¿La pieza está incluida en la campaña?</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pieza-incluida" id="pieza-incluida-si" value="si">
+                            <label class="form-check-label" for="pieza-incluida-si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pieza-incluida" id="pieza-incluida-no" value="no">
+                            <label class="form-check-label" for="pieza-incluida-no">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="archivo-div" style="display:none;">
+                            <label for="archivo">Aquí debes cargar la imagen de aprobación de cotización por parte del cliente.<br>
+                                Peso máximo 5M. * Si el archivo excede este peso por favor enviar desde <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label>
+                            <input type="file" id="archivo" name="archivo[]" class="form-control-file" multiple
+                            accept=".jpg, .jpeg, .png, .gif"/>
+                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos.</small>
+                        </div>
+                    </div>
+                </div><br>
+
+                
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Copy</label>
+                        <textarea name="copy" id="copy" rows="5" class="form-control"
+                            placeholder="Por favor déjanos el texto sugerido para la pieza. Ten en cuenta datos obligatorios como: Fechas, sitios, nombres, productos, información específica." required minlength="100"></textarea>
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">¿Se puede modificar el copy?</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="modficar-copy" id="modficar-copy-si" value="Si">
+                            <label class="form-check-label" for="modificar-si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="modficar-copy" id="modficar-copy-no" value="No">
+                            <label class="form-check-label" for="modficar-copy-no">No</label>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Detalles que debemos tener en cuenta</label>
+                        <textarea name="detalles" id="detalles" rows="5" class="form-control"
+                            placeholder="Si hay detalles específicos, por favor déjalos aquí ( Colores, imágenes, formato, recursos etc)" required minlength="100"></textarea>
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="archivo-div">
+                            <label for="archivo" style="font-size: medium;">Aquí puedes cargar imagenes o archivos de apoyo para el requerimiento. Peso máximo 5M. * Si el archivo excede este peso por favor enviar desde <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label><br>
+                            <input type="file" id="archivo" name="archivo[]" class="form-control-file" multiple
+                            accept=".jpg, .jpeg, .png, .gif"/>
+                            <small class="form-text text-muted">Puedes seleccionar múltiples archivos.</small>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="">Fecha estimada de entrega</label>
+                        <input type="date" class="form-control" id="fecha-entrega" name="fecha-entrega" required>
+                    </div>
+
+                    <div class="col-md-5">
+                        <label for="">Nombre y apellido de quien hace la solicitud</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="">Correo electrónico</label>
+                        <input type="email" class="form-control" id="correo" name="correo" required>
+                    </div>
+                </div><br>
+
+                <div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+
+        </section>
+    </div>
+
+</body>
+
+</html>

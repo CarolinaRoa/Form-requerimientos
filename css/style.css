@@ -1,0 +1,250 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: 'Dosis', sans-serif;
+    --bs-body-bg: #f1f1f1;
+    overflow-y: scroll;
+}
+
+.cabecera {
+    padding: 270px;
+    position: relative;
+    /* Añadido para que los elementos absolutos se posicionen relativos a este contenedor */
+}
+
+.container {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.tab-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 16px;
+}
+
+.tab-link {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    margin: 0px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+    color: #FFF;
+    font-size: large;
+    font-weight: bold;
+}
+
+.tab-link:hover {
+    color: #F7BD03;
+}
+
+.tab-link.active {
+    color: #F7BD03;
+}
+
+.tab-content {
+    padding: 20px;
+    display: none;
+}
+
+.bienvenida {
+    background: #fff;
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    margin-top: 16px;
+}
+ .bienvenida p {
+    text-align: center;
+    font-size:large;
+    font-weight: 700;
+ }
+
+form {
+    background: #fff;
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 0px 18px 3px rgba(247, 189, 3, 0.4);
+    -moz-box-shadow: 0px 0px 18px 3px rgba(247, 189, 3, 0.4);
+    box-shadow: 0px 0px 18px 3px rgba(247, 189, 3, 0.4);
+    width: 100%;
+    padding: 30px;
+    position: relative;
+}
+ 
+a {
+    color: #F7BD03;
+}
+
+h3 {
+    text-align: center;
+    color: #F7BD03;
+    font-weight: 900;
+}
+
+h4 {
+    color: #F7BD03;
+    font-weight: 900;
+}
+
+h5 {
+    color: #F7BD03;
+    font-weight: 700;
+}
+
+label {
+    font-weight: 700;
+    color: #000;
+    font-size: 14pt;
+}
+
+input input[type="text"],
+textarea {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    background-color: #f1f1f1 !important;
+    padding: 10px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #F7BD03 !important;
+}
+
+input[type="checkbox"] {
+    background-color: #fffbfa !important;
+    border: 1px solid #F7BD03;
+}
+
+.styled-button {
+    border: 2px solid #F7BD03;
+    color: #F7BD03;
+}
+
+.form-check-label {
+    color: var(--bs-body-color);
+    font-weight: 400;
+}
+
+.styled-button {
+    border: 2px solid #F7BD03;
+    color: #F7BD03;
+}
+
+.btn-primary {
+    background-color: #F7BD03;
+    border: solid;
+    border-color: #F7BD03;
+    font-size: large;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #000;
+    border-color: #000;
+    font-size: large;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border: solid;
+    border-color: #F7BD03;
+    color: #000;
+    font-size: large;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background-color: #000;
+    border-color: #000;
+    color: #FFF;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+
+    body {
+        background: url('../img/background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .cabecera {
+        padding: 200px;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    body {
+        background: url('../img/background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .cabecera {
+        padding: 150px;
+        position: relative;
+        /* Añadido para que los elementos absolutos se posicionen relativos a este contenedor */
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    body {
+        background: url('../img/backgroundMobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .cabecera {
+        padding: 320px;
+        position: relative;
+        /* Añadido para que los elementos absolutos se posicionen relativos a este contenedor */
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+    body {
+        background: url('../img/backgroundMobile.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .cabecera {
+        padding: 230px;
+        position: relative;
+        /* Añadido para que los elementos absolutos se posicionen relativos a este contenedor */
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width:575px) {
+
+    body {
+        background: url('../img/backgroundMobile.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .cabecera {
+        padding: 180px;
+        position: relative;
+        /* Añadido para que los elementos absolutos se posicionen relativos a este contenedor */
+    }
+}

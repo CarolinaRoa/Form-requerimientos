@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Requerimientos de diseño</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cabecera"></div>
+    <div class="container">
+        <div class="tab-container">
+            <div class="tab-header">
+                <button class="tab-link" onclick="openTab(event, 'tab1')">Requerimientos</button>
+                <button class="tab-link" onclick="openTab(event, 'tab2')">Licitaciones</button>
+                <button class="tab-link" onclick="openTab(event, 'tab3')">Nuevos Proyectos</button>
+                <button class="tab-link" onclick="openTab(event, 'tab4')">Cotizaciones</button>
+            </div>
+
+            <section class="bienvenida">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Bienvenido al módulo de requerimientos del área de diseño</h3>
+                        <p>Por favor llena todos los campos y déjanos la fecha tentativa de tu requerimiento, con todo gusto lo atenderemos y te confirmaremos la fecha de ejecución. <br> <br>
+                            <a href="https://docs.google.com/spreadsheets/d/1ctgchkdBJWYwUZYZp9D9tGLvZHtg4uF6OXokhV_BCQw/edit?pli=1&gid=680032986#gid=680032986" target="_blank" class="btn btn-secondary">Revisa el tráfico aquí</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="tab-content" id="tab1">
+                <link rel="stylesheet" href="css/requerimientos.css">
+                <!--<h2>Requerimientos</h2>-->
+                <section>
+                    <form method="post" action="requerimientos.php" enctype="multipart/form-data" id="requerimientos">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cliente-campaña">Cliente y/o campaña</label>
+                                <select name="cliente-campaña" id="cliente-campaña" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona cliente y/o campaña</option>
+                                    <!--<option value="Licitaciones">Licitaciones</option>-->
+                                    <option value="Almacenamiento">Almacenamiento</option>
+                                    <option value="Apex - Fuerza Apex">Apex - Fuerza Apex</option>
+                                    <option value="B&D - Industrias Imparables">B&D - Industrias Imparables</option>
+                                    <option value="B&D - Yellow Force">B&D - Yellow Force</option>
+                                    <option value="Bavaria - Bavaria a todo corazón">Bavaria - Bavaria a todo corazón</option>
+                                    <option value="Bavaria - Invencibles">Bavaria - Invencibles</option>
+                                    <option value="Bayport - Bayport plus">Bayport - Bayport plus</option>
+                                    <option value="Brila - Brilla tu corazón">Brilla - Brilla tu corazón</option>
+                                    <option value="Caja Social">Caja Social</option>
+                                    <option value="Campañas Gloria">Campañas Gloria</option>
+                                    <option value="Campañas Henkel">Campañas Henkel</option>
+                                    <option value="Campañas Nestle - Culinaria">Campañas Nestle - Culinaria</option>
+                                    <option value="Campañas Nestle - El Rodeo">Campañas Nestle - El Rodeo</option>
+                                    <option value="Campañas Nestle - Klim">Campañas Nestle - Klim</option>
+                                    <option value="Campañas Nestle - Milo Coins">Campañas Nestle - Milo Coins</option>
+                                    <option value="Campañas Nestle - Natures Heart">Campañas Nestle - Natures Heart</option>
+                                    <option value="Campañas Nestle - Playa limpia Cososette">Campañas Nestle - Playa limpia Cososette</option>
+                                    <option value="Casa Luker">Casa Luker</option>
+                                    <option value="CBC Perú - Equipazo 2024">CBC Perú - Equipazo 2024</option>
+                                    <option value="Coca Cola Col - Detallistas">Coca Cola Col - Detallistas</option>
+                                    <option value="Coca Cola Col - Fuerza de ventas">Coca Cola Col - Fuerza de ventas</option>
+                                    <option value="Coca Cola Col - Repisadores">Coca Cola Col - Repisadores</option>
+                                    <option value="Coca Cola CR - Gana +">Coca Cola CR - Gana +</option>
+                                    <option value="Coca Cola GU - Premia Puntos">Coca Cola GU - Premia Puntos</option>
+                                    <option value="Coca Cola GU - Premia Puntos">Coca Cola GU - Premia Puntos</option>
+                                    <option value="Compras">Compras</option>
+                                    <option value="Comunicaciones">Comunicaciones</option>
+                                    <option value="Diageo by Sin Límites">Diageo by Sin Límites</option>
+                                    <option value="Diageo CA - Visionarios Recargados">Diageo CA - Visionarios Recargados</option>
+                                    <option value="Diageo Col - Caminantes">Diageo Col - Caminantes</option>
+                                    <option value="Diageo Col - Legado de ganadores">Diageo Col - Legado de ganadores</option>
+                                    <option value="Diversey Col - Juntos + Fuertes">Diversey Col - Juntos + Fuertes</option>
+                                    <option value="Diversey Ecu - Juntos + Fuertes">Diversey Ecu - Juntos + Fuertes</option>
+                                    <option value="Dos Pinos CR - La gran carrera">Dos Pinos CR - La gran carrera</option>
+                                    <option value="E-commerce">E-commerce</option>
+                                    <option value="Eficacia - Incentiva-t">Eficacia - Incentiva-t</option>
+                                    <option value="FEC">FEC</option>
+                                    <option value="FNB">FNB</option>
+                                    <option value="Gloria - El sabor de la gloria">Gloria - El sabor de la gloria</option>
+                                    <option value="Grupo Merpes Colombia">Grupo Merpes Colombia</option>
+                                    <option value="Grupo Merpes Costa Rica">Grupo Merpes Costa Rica</option>
+                                    <option value="Grupo Merpes Ecuador">Grupo Merpes Ecuador</option>
+                                    <option value="Grupo Merpes Guatemala">Grupo Merpes Guatemala</option>
+                                    <option value="Grupo Merpes Perú">Grupo Merpes Perú</option>
+                                    <option value="Grupo Merpes Perú">Grupo Merpes Perú</option>
+                                    <option value="Grupo Merpes - Invencibles">Grupo Merpes - Invencibles</option>
+                                    <option value="Impocali - Redes de fidelización">Impocali - Redes de fidelización</option>
+                                    <option value="Institucional">Institucional</option>
+                                    <option value="Kimberly Clark Col - Conekctate">Kimberly Clark Col - Conekctate</option>
+                                    <option value="Kimberly Clark Col - Invencibles">Kimberly Clark Col - Invencibles</option>
+                                    <option value="Kimberly Clark Col - Konquistadores">Kimberly Clark Col - Konquistadores</option>
+                                    <option value="Kimberly Clark Perú - Escuadrón">Kimberly Clark Perú - Escuadrón</option>
+                                    <option value="Lactalis - Triathlon">Lactalis - Triathlon</option>
+                                    <option value="Levapan - Levaplus">Levapan - Levaplus</option>
+                                    <option value="Logística">Logística</option>
+                                    <option value="Los Propios">Los Propios</option>
+                                    <option value="Mertec">Mertec</option>
+                                    <option value="Nestle - Confiteros de corazón">Nestle - Confiteros de corazón</option>
+                                    <option value="Newell - La venta de oro">Newell - La venta de oro</option>
+                                    <option value="Pallevarlo">Pallevarlo</option>
+                                    <option value="Plataformas transversal">Plataformas transversal</option>
+                                    <option value="PMI - El propio comercial">PMI - El propio comercial</option>
+                                    <option value="Red Llantas - Red Puntos">Red Llantas - Red Puntos</option>
+                                    <option value="SC Johnson - Plan Conquista">SC Johnson - Plan Conquista</option>
+                                    <option value="Softys - Estrellas Softys">Softys - Estrellas Softys</option>
+                                    <option value="Softys - Héroes Softys">Softys - Héroes Softys</option>
+                                    <option value="Team Foods - Guardianes / Paniclub">Team Foods - Guardianes / Paniclub</option>
+                                    <option value="Terpel - Tienda Terpel">Terpel - Tienda Terpel</option>
+                                    <option value="Valvoline - Club de pilotos">Valvoline - Club de pilotos</option>
+                                    <option value="Vanti - Full Servicio">Vanti - Full Servicio</option>
+                                    <option value="Web Confiteria Nestle">Web Confiteria Nestle</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-3">
+                                <label for="">Fecha de la solicitud</label>
+                                <input type="date" class="form-control" id="fecha-solicitud" name="fecha-solicitud" required>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="otro-cliente-campaña">¿Cuál?</label>
+                                <input type="text" class="form-control" id="otro-cliente-campaña" name="otro-cliente-campaña" style="display: none;">
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="tipo-pieza">Categoría</label>
+                                <select name="tipo-pieza" id="tipo-pieza" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona la categoría</option>
+                                    <option value="Banners">Banners</option>
+                                    <option value="WhatsApp">WhatsApp</option>
+                                    <option value="Presentaciones editables">Presentaciones editables</option>
+                                    <option value="Mockups">Mockups</option>
+                                    <option value="Piezas animadas y audio">Piezas animadas y audio</option>
+                                    <option value="Impresos">Impresos</option>
+                                    <option value="Nuevos proyectos">Nuevos proyectos</option>
+                                    <option value="Redes sociales">Redes sociales</option>
+                                    <option value="Administración plataforma">Administración plataforma</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c1">Banners</label>
+                                <select name="tipo-pieza-c1" id="tipo-pieza-c1" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de banner</option>
+                                    <option value="Banners plataforma">Banners plataforma</option>
+                                    <option value="Banners WhatsApp">Banners WhatsApp</option>
+                                    <option value="Banners mailling">Banners mailling</option>
+                                    <option value="Banners calendario comercial">Banners calendario comercial</option>
+                                    <option value="Banners comunicación interna">Banners comunicación interna</option>
+                                    <option value="Banners infografías">Banners infografías</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c2">WhatsApp</label>
+                                <select name="tipo-pieza-c2" id="tipo-pieza-c2" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Paso a paso general">Paso a paso general</option>
+                                    <option value="Stickers WhatsApp">Stickers WhatsApp</option>
+                                    <option value="Personaje WhatsApp">Personaje WhatsApp</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c3">Presentaciones editables</label>
+                                <select name="tipo-pieza-c3" id="tipo-pieza-c3" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de ppt</option>
+                                    <option value="PPT templates retos">PPT templates retos</option>
+                                    <option value="PPT catálogo editable">PPT catálogo editable</option>
+                                    <option value="PPT presentación editable">PPT presentación editable</option>
+                                    <option value="PPT Plantillas bonos Kupaa">PPT Plantillas bonos Kupaa</option>
+                                    <option value="PPT comercial">PPT comercial</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c4">Mockups</label>
+                                <select name="tipo-pieza-c4" id="tipo-pieza-c4" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de mockup</option>
+                                    <option value="Actualización contenido App">Mockups bonos Kupaa</option>
+                                    <option value="Mockups productos catálogo">Mockups productos catálogo</option>
+                                    <option value="Mockups actividades campañas">Mockups actividades campañas</option>
+                                    <option value="Mockups dotaciones FNB">Mockups dotaciones FNB</option>
+                                    <option value="Mockups merchandising">Mockups merchandising</option>
+                                    <option value="Mockups POP">Mockups POP</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+        
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c5">Piezas animadas y audio</label>
+                                <select name="tipo-pieza-c5" id="tipo-pieza-c5" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Capsula animada">Capsula animada</option>
+                                    <option value="Capsula paso a paso">Capsula paso a paso</option>
+                                    <option value="Capsula general plataforma">Capsula general plataforma</option>
+                                    <option value="Gif animado">Gif animado</option>
+                                    <option value="Cuñas perifoneo">Cuñas perifoneo</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c6">Impresos</label>
+                                <select name="tipo-pieza-c6" id="tipo-pieza-c6" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de impreso</option>
+                                    <option value="Diseño material impreso / POP">Diseño material impreso / POP</option>
+                                    <option value="Diseño caja (plano mecánico)">Diseño caja (plano mecánico)</option>
+                                    <option value="Impresión carnets">Impresión carnets</option>
+                                    <option value="Manual producto">Manual producto</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c7">Nuevos proyectos</label>
+                                <select name="tipo-pieza-c7" id="tipo-pieza-c7" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                    <option value="Mockups App">Mockups App</option>
+                                    <option value="Propuesta logotipo">Propuesta logotipo</option>
+                                    <option value="Propuesta Kv">Propuesta Kv</option>
+                                    <option value="PPT propuesta licitación">PPT propuesta licitación</option>
+                                    <option value="Piezas digitales bingo">Piezas digitales bingo</option>
+                                    <option value="Diseño landing page">Diseño landing page</option>
+                                    <option value="Desarrollo de prototipos">Desarrollo de prototipos</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c8">Redes sociales</label>
+                                <select name="tipo-pieza-c8" id="tipo-pieza-c8" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Publicaciones redes sociales">Publicaciones redes sociales</option>
+                                    <option value="Video TikTok">Video TikTok</option>
+                                    <option value="Historia">Historia</option>
+                                    <option value="Reel">Reel</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipo-pieza-c9">Administración plataforma</label>
+                                <select name="tipo-pieza-c9" id="tipo-pieza-c9" class="form-control">
+                                    <option value="" disabled selected>Selecciona el tipo de pieza</option>
+                                    <option value="Crear nueva campaña">Crear nueva campaña</option>
+                                    <option value="Publicar banners">Publicar banners</option>
+                                    <option value="Publicar T&C">Publicar T&C</option>
+                                    <option value="Mockups Plataforma">Mockups Plataforma</option>
+                                    <option value="Mockups App">Mockups App</option>
+                                    <option value="Vestir plataforma">Vestir plataforma</option>
+                                    <option value="Vestir App">Vestir App</option>
+                                    <option value="Actualización contenido App">Actualización contenido App</option>
+                                    <option value="Seguimientos plataforma">Seguimientos plataforma</option>
+                                    <option value="Plantillas mail plataforma">Plantillas mail plataforma</option>
+                                    <option value="Punto plataforma">Punto plataforma</option>
+                                    <option value="Imágenes galeria carrusel">Imágenes galeria carrusel</option>
+                                    <option value="Responsive plataforma">Responsive plataforma</option>
+                                    <option value="Crear módulo">Crear módulo</option>
+                                    <option value="Ajustes plataforma">Ajustes plataforma</option>
+                                    <option value="Cronometro vencimiento puntos">Cronometro vencimiento puntos</option>
+                                    <option value="Configurar módulo conocimiento">Configurar módulo conocimiento</option>
+                                    <option value="Cargar curso módulo conocimiento">Cargar curso módulo conocimiento</option>
+                                    <option value="Ajustes módulo de conocimiento">Ajustes módulo de conocimiento</option>
+                                    <option value="Publicar calendario comercial">Publicar calendario comercial</option>
+                                    <option value="Crear módulos para perfiles">Crear módulos para perfiles</option>
+                                    <option value="Ajustes perfiles">Ajustes perfiles</option>
+                                    <option value="Códigos Google Analytics">Códigos Google Analytics</option>
+                                    <option value="Configuración visual de bolsas">Configuración visual de bolsas</option>
+                                    <option value="Html mails / firmas">Html mails / firmas</option>
+                                    <option value="Enrrutar plataforma">Enrrutar plataforma</option>
+                                    <option value="Recursos dashboard">Recursos dashboard</option>
+                                    <option value="Formulario de captura">Formulario de captura</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="">¿Cual?</label>
+                                <input type="text" class="form-control" id="otra-categoria" name="otra-categoria">
+                            </div>        
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="">Objetivo de la pieza</label>
+                                <textarea name="objetivo-pieza" id="objetivo-pieza" rows="3" class="form-control" placeholder="Describe detalladamente el objetivo de la pieza. Escribe mínimo 20 caracteres." required minlength="20"></textarea>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                                <label for="pieza-incluida">¿La pieza está incluida en la campaña?</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="pieza-incluida" id="pieza-incluida-si" value="Si" required>
+                                    <label class="form-check-label" for="pieza-incluida-si">Sí</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="pieza-incluida" id="pieza-incluida-no" value="No">
+                                    <label class="form-check-label" for="pieza-incluida-no">No</label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div id="archivo-div" style="display:none;">
+                                    <label for="archivo" style="font-size: medium;">Aquí debes cargar la imagen de aprobación de cotización por parte del cliente.<br></label>
+                                    <input type="file" id="archivo" name="archivo[]" class="form-control-file" multiple
+                                    accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                    <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                </div>
+                            </div>
+                        </div>                        
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="">Copy</label>
+                                <textarea name="copy" id="copy" rows="2" class="form-control"
+                                    placeholder="Por favor déjanos el texto sugerido para la pieza. Ten en cuenta datos obligatorios como: Fechas, sitios, nombres, productos, información específica. Escribe mínimo 20 caracteres." required minlength="20"></textarea>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="">¿Se puede modificar el copy?</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="modficar-copy" id="modficar-copy-si" value="Si" required>
+                                    <label class="form-check-label" for="modificar-si">Sí</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="modficar-copy" id="modficar-copy-no" value="No">
+                                    <label class="form-check-label" for="modficar-copy-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="">Detalles que debemos tener en cuenta</label>
+                                <textarea name="detalles" id="detalles" rows="5" class="form-control"
+                                    placeholder="Si hay detalles específicos, por favor déjalos aquí ( Colores, imágenes, formato, recursos etc). Escribe mínimo 20 caracteres." required minlength="20"></textarea>
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <label for="">Aquí puedes cargar imagenes o archivos de apoyo para el requerimiento.</label> <br>
+                            <div class="col-md-4 subir-recursos">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cargar-recursos" id="cargar-aqui" value="Cargar en form">
+                                    <label class="form-check-label" for="cargar-aqui">Cargar aquí</label>
+                                </div>        
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cargar-recursos" id="cargar-wetransfer" value="Cargar en WeTransfer">
+                                    <label class="form-check-label" for="cargar-wetransfer">Cargar por WeTransfer</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-7">
+                                <div id="recursos-aqui" style="display:none;">
+                                    <input type="file" id="archivo-apoyo" name="archivo-apoyo[]" class="form-control-file" multiple
+                                    accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                    <small class="form-text text-muted">Puedes seleccionar múltiples archivos. Peso máximo 5MB*.</small>
+                                </div>
+
+                                <div id="recursos-wetransfer" style="display:none;">
+                                    <label for="" style="font-size: medium;">Haz clic sobre el link y envía el archivo <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label>
+                                </div>
+                            </div>
+
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-3">
+                                <label for="">Fecha estimada de entrega</label>
+                                <input type="date" class="form-control" id="fecha-entrega" name="fecha-entrega" required>
+                            </div>
+        
+                            <div class="col-md-5">
+                                <label for="">Nombre y apellido de quien hace la solicitud</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+        
+                            <div class="col-md-4">
+                                <label for="">Correo electrónico de quien hace la solicitud</label>
+                                <input type="email" class="form-control" id="correo-solicitante" name="correo-solicitante" required>
+                            </div> <br>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="">Copiar en este requerimiento a:</label>
+                                <div id="emails-container">
+                                    <input type="text" class="form-control" name="email-copia" id="email-copia" placeholder="Ingresa uno o varios correos separados por comas">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="formularios-container">
+                            <!-- Formularios se agregarán aquí -->
+                        </div>
+                        
+                        <!-- Botones de acción -->
+                <div class="row mt-4">
+                    <ul class="pt-4 pb-4 ps-0 d-flex gap-4 flex-nowrap flex-row flex-lg-wrap align-items-middle align-items-lg-middle justify-content-center botones" id="botones-iniciales">
+                        <li><button type="submit" class="btn btn-primary">Enviar requerimiento</button></li>
+                        <li><button type="button" class="btn btn-secondary" id="agregar-formulario">Solicitar otra pieza para el mismo cliente</button></li>
+                    </ul>
+                </div>
+                    </form>
+        
+                </section>
+                <script src="js/requerimientos.js"></script>
+            </div>
+
+            <div class="tab-content" id="tab2" style="display:none">
+                <link rel="stylesheet" href="css/licitaciones.css">
+                <!--<h2>Licitaciones</h2>-->
+                <section>
+                    <form method="post" action="enviar_correo.php">
+                        <div class="col-md-12">
+                            <h3>INFORMACIÓN GENERAL</h3>
+                            <div class="row">
+                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre-cliente">Nombre de cliente</label>
+                                        <input type="text" id="nombre-cliente" name="nombre-cliente" class="form-control" required>
+                                    </div>
+                                </div>
+                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre-campana">Nombre de la campaña:</label>
+                                        <input type="text" id="nombre-campana" name="nombre-campana" class="form-control" required>
+                                    </div>
+                                </div>
+                
+                            </div><br>
+                
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="pais">País:</label>
+                                        <select id="pais" class="form-control" name="pais" required>
+                                            <option value="">Seleccionar país</option>
+                                        </select>
+                                    </div>
+                                </div>
+                
+                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="marcas">Marcas a impactar:</label>
+                                        <input type="text" id="marcas" name="marcas" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="personas">Personas a impactar:</label>
+                                        <input type="text" id="personas" name="personas" class="form-control number"
+                                            placeholder="Número de personas" required>
+                                    </div>
+                                </div>
+                
+                                
+                            </div><br>
+                
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="tipo">Tipo de campaña:</label>
+                                        <select id="tipo" name="tipo" class="form-control" required>
+                                            <option value="">Seleccionar tipo de campaña</option>
+                                            <option value="Programa de incentivos">Programa de incentivos</option>
+                                            <option value="Programa de fidelizacion">Programa de fidelización</option>
+                                            <option value="Campaña de visibilidad">Campaña visibilidad</option>
+                                        </select>
+                                    </div>
+                                </div>
+                
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label>Fuerza de ventas:</label><br>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="interna"
+                                                        name="tipo_ffvv[]" value="Interna">
+                                                    <label class="form-check-label" for="interna">Interna</label><br>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="externa"
+                                                        name="tipo_ffvv[]" value="Externa">
+                                                    <label class="form-check-label" for="externa">Externa</label><br>
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-md-5">
+                                                <label>Canal de ventas:</label><br>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="distribuidores"
+                                                        name="canal_ffvv[]" value="Distribuidores">
+                                                    <label class="form-check-label"
+                                                        for="distribuidores">Distribuidores</label><br>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="moderno"
+                                                        name="canal_ffvv[]" value="Moderno">
+                                                    <label class="form-check-label" for="moderno">Moderno</label><br>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="tradicional"
+                                                        name="canal_ffvv[]" value="Tradicional"
+                                                        onclick="seleccionarTradicional()">
+                                                    <label class="form-check-label" for="tradicional">Tradicional</label><br>
+                                                </div>
+                                                <ul style="list-style-type: none;">
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="tienda_barrio"
+                                                                name="canal_ffvv[]" value="Tiendas de barrio"
+                                                                onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label" for="tienda_barrio">Tiendas
+                                                                de barrio</label><br>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="ferreterias_pequenas" name="canal_ffvv[]"
+                                                                value="Ferreterías pequeñas" onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label"
+                                                                for="ferreterias_pequenas">Ferreterías
+                                                                pequeñas</label><br>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="panaleras"
+                                                                name="canal_ffvv[]" value="Pañaleras"
+                                                                onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label"
+                                                                for="panaleras">Pañaleras</label><br>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="farmacias"
+                                                                name="canal_ffvv[]" value="Farmacias independientes"
+                                                                onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label" for="farmacias">Farmacias
+                                                                independientes</label><br>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="minimercados_independientes" name="canal_ffvv[]"
+                                                                value="Minimercados independientes"
+                                                                onclick="seleccionarTradicional()">
+                                                            <label class="form-check-label"
+                                                                for="minimercados_independientes">Minimercados
+                                                                independientes</label><br>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Cliente final</label><br>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="consumidor_shopper"
+                                                        name="cliente_final[]" value="Consumidor o Shoper">
+                                                    <label class="form-check-label" for="consumidor_shopper">Consumidor o
+                                                        Shopper</label><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                        </div>
+                
+                        <div class="col-md-12">
+                
+                            <h2>CARACTERÍSTICAS DEL PROYECTO</h2>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="objetivo_general">Describe tu objetivo general</label>
+                                        <textarea id="objetivo_general" rows="3" class="form-control" name="objetivo_general"
+                                            placeholder="Indícanos el objetivo general que buscas conseguir con este proyecto."
+                                            required></textarea>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="target_group">Target group:</label>
+                                        <textarea id="target_group" rows="2" class="form-control" name="target_group"
+                                            placeholder="Define el perfil demográfico de los participantes de la campaña: edad, sexo, gustos, nivel de educación, rutina, etc."
+                                            required></textarea>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>¿Qué busco transmitir al participante con esta campaña?</label>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <textarea id="sienta" rows="3" class="form-control" placeholder="Sienta..."
+                                                    name="sienta" required></textarea>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <textarea id="piense" rows="3" class="form-control" placeholder="Piense..."
+                                                    name="piense" required></textarea>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <textarea id="haga" rows="3" class="form-control" placeholder="Haga..."
+                                                    name="haga" required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                        </div>
+                
+                        <div class="col-md-12">
+                
+                            <h2>DETALLES DEL CONCEPTO (BRAINING STORM)</h2>
+                
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="pautas">¿Cuáles son las pautas que debemos tener en cuenta para el
+                                            desarrollo del concepto?</label>
+                                        <textarea id="pautas" name="pautas" class="form-control" rows="2" required></textarea>
+                                    </div>
+                                </div><br>
+                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="tono">¿Qué tono o imagen te gustaría mostrar?</label>
+                                        <textarea type="text" id="tono" name="tono" class="form-control" rows="2"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="concepto_tematica">¿Tienes algún concepto o temática en mente? (Ejemplo: Deportes, Desafío, Conquista, Guerreros)</label><br>
+
+                                        <input type="radio" id="concepto_si" name="concepto" value="Si"
+                                            onchange="mostrarCampoCuál('concepto_tematica_cual')">
+                                            <label class="form-check-label" for="concepto_si">Si</label>
+
+                                        <input type="radio" id="concepto_no" name="concepto" value="No"
+                                            onchange="ocultarCampoCuál('concepto_tematica_cual')">
+                                            <label class="form-check-label" for="concepto_no">No</label>
+
+                                        <textarea id="concepto_tematica_cual" name="concepto_tematica_cual" class="form-control" placeholder="¿Cuál?" style="display: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="preferencia_color">¿Tienes algunas preferencias de color?</label><br>
+                                        
+                                        <input type="radio" id="preferencia_color_si" name="preferencia" value="Si" onchange="mostrarCampoCuál('preferencia-color-cual')">
+                                        
+                                        <label class="form-check-label" for="preferencia_color_si">Si</label>
+
+                                        <input type="radio" id="preferencia_color_no" name="preferencia" value="No" onchange="ocultarCampoCuál('preferencia-color-cual')">
+                                        <label class="form-check-label" for="preferencia_color_no">No</label>
+
+                                        <textarea id="preferencia-color-cual" name="preferencia_color_cual" class="form-check-label" placeholder="¿Cuál?" style="display: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="logo">¿Hay algún elemento que quisieras incluir en el logo?</label><br>
+                                        <input type="radio" id="logo_si" name="logo" value="Si"
+                                            onchange="mostrarCampoCuál('logo-cual')"> <label class="form-check-label"
+                                            for="logo_si">Si</label>
+                                        <input type="radio" id="logo_no" name="logo" value="No"
+                                            onchange="ocultarCampoCuál('logo-cual')"> <label class="form-check-label"
+                                            for="logo_no">No</label>
+                                        <textarea id="logo-cual" name="logo_cual" class="form-control" placeholder="¿Cuál?"
+                                            style="display: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="temas_caracteristicas">¿Qué temas o elementos característicos de tu marca
+                                        debemos tener en cuenta en el desarrollo gráfico?</label><br>
+                                    <textarea id="temas_caracteristicas" name="temas_caracteristicas" required
+                                        class="form-control"></textarea>
+                                </div>
+                            </div><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="elementos_no">¿Qué elementos NO debe tener la campaña?</label><br>
+                                    <textarea id="elementos_no" name="elementos_no" required
+                                        placeholder="No poner la marca junto a…, ni vincularla con temas religiosos, no poner la marca en el piso, siempre poner la frase de campaña, etc."
+                                        class="form-control"></textarea>
+                                </div>
+                            </div><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="inspiracion">Inspiración</label><br>
+                                    <textarea id="inspiracion" name="inspiracion" required
+                                        placeholder="Cualquier idea que pueda ayudar al éxito de la campaña / películas, fotos, revistas, frases, sugerencias son un acelerador para nuestra creatividad."
+                                        class="form-control"></textarea>
+                                </div>
+                            </div><br>
+                
+                        </div>
+                
+                        <div class="col-md-12">
+                
+                            <h2>DETALLES DE LA CAMPAÑA</h2><br>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>Cuéntanos qué necesitas</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="desarrollo-app" name="necesidad[]"
+                                                    value="Desarrollo app" class="form-check-input">
+                                                <label class="form-check-label" for="desarrollo-app">Desarrollo de App</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="desarrollo-piezas" name="necesidad[]"
+                                                    value="Desarrollo piezas" class="form-check-input">
+                                                <label class="form-check-label" for="desarrollo-piezas">Desarrollo de piezas
+                                                    gráficas</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="desarrollo-plataforma" name="necesidad[]"
+                                                    value="Desarrollo plataforma web" class="form-check-input">
+                                                <label class="form-check-label" for="desarrollo-plataforma">Desarrollo de
+                                                    plataforma web</label>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="comunicaciones-whatsapp" name="necesidad[]"
+                                                    value="Comunicaciones WhatsApp" class="form-check-input">
+                                                <label class="form-check-label" for="comunicaciones-whatsapp">Comunicaciones por
+                                                    WhatsApp</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="administracion_campana" name="necesidad[]"
+                                                    value="Administracion campaña" class="form-check-input">
+                                                <label class="form-check-label" for="administracion_campana">Administración de
+                                                    campaña</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="promotores" name="necesidad[]"
+                                                    value="Promotores de venta y mercaderistas" class="form-check-input">
+                                                <label class="form-check-label" for="promotores"
+                                                    value="Promotores de venta y mercaderistas">Promotores de venta y
+                                                    mercaderistas</label>
+                                            </div>
+                
+                                        </div>
+                
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="consolidacion_datos" name="necesidad[]"
+                                                    value="Consolidación de datos" class="form-check-input">
+                                                <label class="form-check-label" for="consolidacion_datos"
+                                                    value="Consolidación de datos">Consolidación de datos</label>
+                                            </div>
+                
+                                            <div class="form-check">
+                                                <input type="checkbox" id="liquidacion_puntos" name="necesidad[]"
+                                                    value="Liquidación del plan de puntos" class="form-check-input">
+                                                <label class="form-check-label" for="liquidacion_puntos"
+                                                    value="Liquidación del plan de puntos">Liquidación del plan de
+                                                    puntos</label>
+                                            </div>
+                                        </div>
+                                    </div><br>
+                
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="necesidad-otros" name="necesidad-otros"
+                                                    placeholder="Otras ¿Cuáles?"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div><br>
+                
+                        <h3>Jerarquia</h3>
+                
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="perfiles">¿Se requieren de modulos personalizados para diferentes perfiles?</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="radio" type="radio" id="perfiles_si" name="perfiles" value="Si"
+                                            onchange="mostrarOcultarContenido('perfiles_si', 'contenido_perfiles')">
+                                        <label class="form-check-label" for="perfiles_si">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="radio" type="radio" id="perfiles_no" name="perfiles" value="No"
+                                            onchange="mostrarOcultarContenido('perfiles_no', 'contenido_perfiles')">
+                                        <label class="form-check-label" for="perfiles_no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+                
+                        <div class="row" id="contenido_perfiles" style="display: none;">
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="necesidad-otros" name="necesidad-otros"
+                                            placeholder="¿Cuantos"></textarea>
+                                    </div>
+                                </div>
+                            </div><br>                
+                        </div>
+                
+                        <h3>Puntos y premios</h3>
+                
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="valor_punto">¿Tienes algún punto en mente?</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="radio" type="radio" id="valor_punto_si" name="valor_punto" value="Si"
+                                            onchange="mostrarCampoCuál('valor_punto_cual')">
+                                        <label class="form-check-label" for="valor_punto_si">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="radio" type="radio" id="valor_punto_no" name="valor_punto" value="No"
+                                            onchange="ocultarCampoCuál('valor_punto_cual')">
+                                        <label class="form-check-label" for="valor_punto_no">No</label>
+                                    </div>
+                                    <textarea class="form-control" id="valor_punto_cual" name="valor_punto_cual"
+                                        placeholder="¿Cuál?" style="display: none;"></textarea>
+                                </div>
+                            </div>
+                        </div><br>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="archivo-div">
+                                    <label for="archivo-licitacion" style="font-size: medium;">Aquí puedes cargar el borrador de la ppt, imagenes o archivos de apoyo para el requerimiento. Peso máximo 5M. * Si el archivo excede este peso por favor enviar desde <a href="https://grupomerpes.wetransfer.com" target="_blank">https://grupomerpes.wetransfer.com</a></label><br>
+                                    <input type="file" id="archivo-licitacion" name="archivo-licitacion[]" class="form-control-file" multiple
+                                    accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx"/>
+                                    <small class="form-text text-muted">Puedes seleccionar múltiples archivos.</small>
+                                </div>
+                            </div>
+                        </div><br>
+                        
+                        <div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+
+                    </form>
+                </section>
+                <script src="js/licitaciones.js"></script>
+            </div>
+
+            <div class="tab-content" id="tab3" style="display:none">
+                <!--<link rel="stylesheet" href="nuevos-proyectos.css">
+                <h2>Nuevos Proyectos</h2>
+                <p>Contenido de la pestaña Nuevos Proyectos...</p>
+                <script src="nuevos-proyectos.js"></script>-->
+            </div>
+
+            <div class="tab-content" id="tab4" style="display:none">
+                <!--<link rel="stylesheet" href="cotizaciones.css">
+                <h2>Cotizaciones</h2>
+                <p>Contenido de la pestaña Cotizaciones...</p>
+                <script src="cotizaciones.js"></script>-->
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
